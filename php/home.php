@@ -17,8 +17,8 @@
                             
                             <span class="titlerailway">Railway Reservation System</span>
                             
-                            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Login</a></li>
-                            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Register</a></li>
+                            <li class="menu__group"><a href="signin.php" class="menu__link r-link text-underlined">Login</a></li>
+                            <li class="menu__group"><a href="signup.php" class="menu__link r-link text-underlined">Register</a></li>
                             <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">About Us</a></li>
                             <li class="menu__group">
                                 

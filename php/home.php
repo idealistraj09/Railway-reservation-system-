@@ -2,7 +2,7 @@
 
     <head>
         <link rel="stylesheet" href="../css/home_css.css">
-        <script src="time.js"></script>
+        <script src="../js/signin.js"></script>
         <title>Home</title>
     </head>
     <body onload="initClock()">

@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="home_css.css">
+        <link rel="stylesheet" href="../css/home_css.css">
         <script src="time.js"></script>
         <title>Home</title>
     </head>

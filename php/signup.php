@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="signin.css">
-    <script src="signin.js"></script>
+    <link rel="stylesheet" href="css/signin.css">
+    <script src="js/signin.js"></script>
     <title>sign up page</title>
 </head>
 

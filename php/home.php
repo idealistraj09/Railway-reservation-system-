@@ -2,10 +2,10 @@
 
     <head>
         <link rel="stylesheet" href="../css/home_css.css">
-        <script src="../js/signin.js"></script>
+        <script src="../js/time.js"></script>
         <title>Home</title>
     </head>
-    <body onload="updateClock()">
+    <body onload="initClock()">
         <div class="container">
             <header class="container__header">
                 <div class="page">

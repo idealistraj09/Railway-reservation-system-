@@ -5,7 +5,7 @@
         <script src="../js/signin.js"></script>
         <title>Home</title>
     </head>
-    <body onload="initClock()">
+    <body onload="updateClock()">
         <div class="container">
             <header class="container__header">
                 <div class="page">

@@ -33,10 +33,7 @@
           document.getElementById(ids[i]).firstChild.nodeValue = values[i];
     }
 
-    function initClock(){
-      updateClock();
-      window.setInterval("updateClock()", 1);
-    }
+    
   function hi()
   {
     window.alert("redirecting to show_train.php");

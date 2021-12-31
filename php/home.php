@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="../css/home_css.css">
         <script src="../js/time.js"></script>
-        <title>Home</title>
+        <title>Home page</title>
     </head>
     <body onload="initClock()">
         <div class="container">

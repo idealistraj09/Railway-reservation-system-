@@ -44,7 +44,7 @@
                     <input type="text" placeholder="city" name="city" required />
                     <input type="text" placeholder="state" name="state" required />
                     <input type="text" placeholder="Local address" name="ladd" required />
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <button class="ghost" id="signUp" name="signup">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -53,7 +53,8 @@
 
 </body>
 <?php
-if (isset($_POST['uname'])) {
+if (isset($_POST['signup'])) {
+    session_start();
     $link = mysqli_connect("localhost", "raj1", "Raj@2005");
     $db = mysqli_select_db($link, "project");
 

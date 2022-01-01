@@ -1,5 +1,8 @@
 <html>
-
+    <?php
+        include("signin.php");
+        
+    ?>
     <head>
         <link rel="stylesheet" href="../css/home_css.css">
         <script src="../js/time.js"></script>

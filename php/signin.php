@@ -1,5 +1,47 @@
-<html>
 
+<?php
+    session_start();
+    include("../include/connection.php");
+
+    if(isset($_POST['login']))
+    {
+        $username = $_POST['uname'];
+        $password = $_POST['pass'];
+
+        $error = array();
+
+        if(empty($username))
+        {
+            $error['uname'] =  "Enter E-mail";
+        }
+        elseif(empty($password))
+        {
+            $error['pass'] = "Enter Password";
+        }
+
+        if(count($error)==0)
+        {
+            $sql = "SELECT * FROM passenger WHERE Admin_id='$username' AND PasswordT='$password';";
+            $result = mysqli_query($con,$sql);
+            
+
+            if(mysqli_num_rows($result)==1)
+            {
+                echo "<script>alert('You have sucessfuly loged in as admin ')</script>";
+
+                $_SESSION['admin'] = $username;            
+                header("Location:home.php");
+
+            }
+            else
+            {
+                echo "<script>alert('Email and Password is incorrect')</script>";
+            }
+        }
+    }
+?>
+
+<html>
 <head>
     <link rel="stylesheet" href="../css/signin.css">
     <script src="../js/time.js"></script>
@@ -9,45 +51,46 @@
 <body>
     <h2>Join us</h2>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#" method="$_GET">
-                <h1>Create Account</h1>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+        <div class="form-container sign-in-container">
+            <form action="#" method="POST">
+                <h1>Sign in</h1>
+                <span>or use your account</span>
+                <input type="text" placeholder="User id" name="uname"  />
+                <input type="password" placeholder="Password" name="pass"/>
+                <a href="#">Forgot your password?</a>
+                <button name="login">Sign In</button>
             </form>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
-
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
+        <div>
+        <?php
+            if(isset($error['uname']))
+            {
+                $show = $error['uname']; 
+            }
+            else
+            {
+                $show= "";
+            }
+            echo $show;
+        ?>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                <form action="signup.php">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+                    <form action="signup.php">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp" >Sign Up</button>
-</form>     
+                    <button class="ghost" id="signUp">Sign Up</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 
 </html>

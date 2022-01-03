@@ -16,17 +16,20 @@
                 <span>or use your account</span>
                 <input type="text" placeholder="Username" name="uname" required />
                 <input type="password" placeholder="Password" name="pass" required />
-                <input type="text" placeholder="first name" name="fname" required />
-                <input type="text" placeholder="last name" name="lname" required />
+                <input type="text" placeholder="First name" name="fname" required />
+                <input type="text" placeholder="Last name" name="lname" required />
                 <input type="email" placeholder="Email" name="email" required />
 
                 <div class="gender1">
-                <input type="radio" id="huey" name="gender" value="male" checked>
-                <label for="huey">Male</label>
-                <input type="radio" id="dewey" name="gender" value="female">
-                <label for="dewey">Female</label>
-                <input type="radio" id="louie" name="gender" value="Other">
-                <label for="louie">Other</label>
+                    <label for="m" class="radio">
+                        <input type="radio" id="m" name="gender" value="male" checked>Male
+                    </label>
+                    <label for="f">
+                        <input type="radio" id="f" name="gender" value="female">Female
+                    </label>
+                    <label for="o">
+                        <input type="radio" id="o" name="gender" value="Other">Other
+                    </label>
                 </div>
         </div>
         <div class="overlay-container">
@@ -44,7 +47,7 @@
                     <input type="text" placeholder="city" name="city" required />
                     <input type="text" placeholder="state" name="state" required />
                     <input type="text" placeholder="Local address" name="ladd" required />
-                    <button class="ghost" id="signUp" name="signup">Sign Up</button>
+                    <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -53,8 +56,7 @@
 
 </body>
 <?php
-if (isset($_POST['signup'])) {  
-    session_start();
+if (isset($_POST['uname'])) {
     $link = mysqli_connect("localhost", "raj1", "Raj@2005");
     $db = mysqli_select_db($link, "project");
 

@@ -1,42 +1,26 @@
-
 <?php
     session_start();
     include("../include/connection.php");
 
     if(isset($_POST['login']))
     {
-        $username = $_POST['uname'];
-        $password = $_POST['pass'];
+        $uname=$_REQUEST['uname'];
+        $pass=$_REQUEST['pass'];
 
-        $error = array();
-
-        if(empty($username))
+        $sql= "SELECT * FROM passenger WHERE Admin_id='$uname' AND PasswordT='$pass' limit 1";
+        $result=mysqli_query($con,$sql);
+        $rows=mysqli_num_rows($result);
+        echo "".mysqli_error($con);
+        if(mysqli_num_rows($result)==1)
         {
-            $error['uname'] =  "Enter E-mail";
-        }
-        elseif(empty($password))
-        {
-            $error['pass'] = "Enter Password";
-        }
-
-        if(count($error)==0)
-        {
-            $sql = "SELECT * FROM passenger WHERE Admin_id='$username' AND PasswordT='$password';";
-            $result = mysqli_query($con,$sql);
-            
-
-            if(mysqli_num_rows($result)==1)
-            {
-                echo "<script>alert('You have sucessfuly loged in as admin ')</script>";
-
-                $_SESSION['admin'] = $username;            
+            echo "<script>alert('You have sucessfuly loged in as admin ')</script>";
+            $_SESSION['admin'] = $username;            
                 header("Location:home.php");
 
-            }
-            else
-            {
-                echo "<script>alert('Email and Password is incorrect')</script>";
-            }
+        }
+        else
+        {
+            echo "<script>alert('Email and Password is incorrect')</script>";
         }
     }
 ?>
@@ -63,15 +47,7 @@
         </div>
         <div>
         <?php
-            if(isset($error['uname']))
-            {
-                $show = $error['uname']; 
-            }
-            else
-            {
-                $show= "";
-            }
-            echo $show;
+            
         ?>
         </div>
         <div class="overlay-container">

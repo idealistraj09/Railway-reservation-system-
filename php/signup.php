@@ -53,7 +53,7 @@
 
 </body>
 <?php
-if (isset($_POST['signup'])) {
+if (isset($_POST['signup'])) {  
     session_start();
     $link = mysqli_connect("localhost", "raj1", "Raj@2005");
     $db = mysqli_select_db($link, "project");

@@ -2,30 +2,52 @@
     session_start();
     include("../include/connection.php");
 
-    if(isset($_POST['login']))
-    {
-        $uname=$_REQUEST['uname'];
-        $pass=$_REQUEST['pass'];
+    if (isset($_POST['login'])) {
+        $uname = $_POST['uname'];
+        $password = $_POST['pass'];
 
-        $sql= "SELECT * FROM passenger WHERE Admin_id='$uname' AND PasswordT='$pass' limit 1";
-        $result=mysqli_query($con,$sql);
-        $rows=mysqli_num_rows($result);
-        echo "".mysqli_error($con);
-        if(mysqli_num_rows($result)==1)
-        {
-            echo "<script>alert('You have sucessfuly loged in as admin ')</script>";
-            $_SESSION['admin'] = $username;            
-                header("Location:home.php");
+        $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' ";
+        $query = mysqli_query($con, $id_search);
+        $id_count = mysqli_num_rows($query);
 
+        if ($id_count) {
+
+            $id_pass = mysqli_fetch_assoc($query);
+            $db_pass = $id_pass['PasswordT'];
+
+            if ($db_pass === $password) {
+                session_start();
+?>
+    <script>
+        alert("Log in succesfull ");
+        location.replace("home.php");
+    </script>
+<?php
+            } 
+            else{
+?>
+    <script>
+        alert("Password is incorrect ");
+        
+    </script>
+<?php
+            }
         }
-        else
-        {
-            echo "<script>alert('Email and Password is incorrect')</script>";
+        else{
+?>
+    <script>
+        alert("Enter valid user id ");
+    </script>
+<?php
         }
+    
     }
+
+
 ?>
 
 <html>
+
 <head>
     <link rel="stylesheet" href="../css/signin.css">
     <script src="../js/time.js"></script>
@@ -39,16 +61,16 @@
             <form action="#" method="POST">
                 <h1>Sign in</h1>
                 <span>or use your account</span>
-                <input type="text" placeholder="User id" name="uname"  />
-                <input type="password" placeholder="Password" name="pass"/>
+                <input type="text" placeholder="User id" name="uname" />
+                <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
                 <button name="login">Sign In</button>
             </form>
         </div>
         <div>
-        <?php
-            
-        ?>
+            <?php
+
+            ?>
         </div>
         <div class="overlay-container">
             <div class="overlay">

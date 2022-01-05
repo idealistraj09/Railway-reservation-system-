@@ -1,19 +1,16 @@
 <html>
-    <?php
-        include("signin.php");
-        
-    ?>
-    <head>
-        <link rel="stylesheet" href="../css/home_css.css">
-        <script src="../js/time.js"></script>
-        <title>Home page</title>
-    </head>
-    <body onload="initClock()">
-        <div class="container">
-            <header class="container__header">
-                <div class="page">
-                    
-                    <nav class="page__menu menu">
+
+<head>
+    <link rel="stylesheet" href="../css/home_css.css">
+    <script src="../js/time.js"></script>
+    <title>sign in</title>
+</head>
+
+<body onload="initClock()">
+    
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+        <nav class="page__menu menu">
                         <ul class="menu__list r-list">
                             
                             <img src="BlueTrain.jpg" height="50px">
@@ -43,10 +40,14 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
-            </header>
-            
-            <center>
+        </div>
+        <div>
+            <?php
+
+            ?>
+        </div>
+        <div class="overlay-container">
+        <center>
             <main class="container__main">
                 <div class="main_book">
                     <div class="main_title">
@@ -88,10 +89,8 @@
                 </div>
             </main>
             </center>
-            
-            <footer class="container__footer">
-                ...
-            </footer>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

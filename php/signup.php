@@ -16,37 +16,40 @@
                 <span>or use your account</span>
                 <input type="text" placeholder="Username" name="uname" required />
                 <input type="password" placeholder="Password" name="pass" required />
+                <input type="password" placeholder="Re-Enter Password" name="repass" required />
                 <input type="text" placeholder="First name" name="fname" required />
                 <input type="text" placeholder="Last name" name="lname" required />
                 <input type="email" placeholder="Email" name="email" required />
-
-                <div class="gender1">
-                    <label for="m" class="radio">
-                        <input type="radio" id="m" name="gender" value="male" checked>Male
-                    </label>
-                    <label for="f">
-                        <input type="radio" id="f" name="gender" value="female">Female
-                    </label>
-                    <label for="o">
-                        <input type="radio" id="o" name="gender" value="Other">Other
-                    </label>
-                </div>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
+                    <p>To keep connected with us, please login.</p>
                     <button class="ghost" id="signIn">Sign up</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <input type="text" placeholder="9339657290." max="11" name="no" required />
+                    Select your Gender. <!--Custom Label-->
+                    <div class="gender1" required>
+                        <label for="m" class="radio">
+                            <input type="radio" id="m" name="gender" value="male" required>Male
+                        </label>
+                        <label for="f">
+                            <input type="radio" id="f" name="gender" value="female">Female
+                        </label>
+                        <label for="o">
+                            <input type="radio" id="o" name="gender" value="Other">Other
+                        </label>
+                    </div>
+
+                    <input type="tel" pattern="[0-9]{10}" placeholder="Phone Number" maxlength="10" name="no" required />
                     <input type="date" name="date1" required />
-                    <input type="text" placeholder="city" name="city" required />
-                    <input type="text" placeholder="state" name="state" required />
-                    <input type="text" placeholder="Local address" name="ladd" required />
+                    <input type="text" placeholder="City" name="city" required />
+                    <input type="text" placeholder="State" name="state" required />
+
+                    <!--For Entering Address:-->
+                    <textarea resize=none placeholder="Address" name="ladd" required></textarea>
+
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../css/home_css.css">
   <script src="../js/time.js"></script>
 </head>
-
 <body onload="initClock()">
   <!-- navbar -->
   <nav class="navbar">
@@ -62,6 +61,4 @@
   </div>
   <!--/.container-->
 </body>
-
-
 </html>

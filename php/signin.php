@@ -1,43 +1,47 @@
 <?php
-session_start();
-include("../include/connection.php");
+    session_start();
+    include("../include/connection.php");
 
-if (isset($_POST['login'])) {
-    $uname = $_POST['uname'];
-    $password = $_POST['pass'];
+    if (isset($_POST['login'])) {
+        $uname = $_POST['uname'];
+        $password = $_POST['pass'];
 
-    $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' ";
-    $query = mysqli_query($con, $id_search);
-    $id_count = mysqli_num_rows($query);
+        $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' ";
+        $query = mysqli_query($con, $id_search);
+        $id_count = mysqli_num_rows($query);
 
-    if ($id_count) {
+        if (strcasecmp($uname,$id_search)==0) {
 
-        $id_pass = mysqli_fetch_assoc($query);
-        $db_pass = $id_pass['PasswordT'];
+            //$id_pass = mysqli_fetch_assoc($query);
+            //$db_pass = $id_pass['PasswordT'];
 
-        if ($db_pass === $password) {
-            session_start();
+            // if ($db_pass === $password) {
+            //     session_start();
 ?>
-            <script>
-                alert("Log in succesfull ");
-                location.replace("home.php");
-            </script>
-        <?php
-        } else {
-        ?>
-            <script>
-                alert("Password is incorrect ");
-            </script>
-        <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert("Enter valid user id ");
-        </script>
+    <script>
+        alert("Log in succesfull ");
+        location.replace("home.php");
+    </script>
 <?php
-    }
-}
+            } 
+            else{
+?>
+    <script>
+        alert("Password is incorrect ");
+        
+    </script>
+<?php
+            }
+        }
+        else{
+?>
+    <script>
+        alert("Enter valid user id ");
+    </script>
+<?php
+        }
+    
+    
 
 
 ?>
@@ -46,15 +50,11 @@ if (isset($_POST['login'])) {
 
 <head>
     <link rel="stylesheet" href="../css/signin.css">
-
     <script src="../js/time.js"></script>
     <title>sign in</title>
 </head>
 
-<body >
-
-    <!--/.container-->
-    </nav>
+<body>
     <h2>Join us</h2>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
@@ -65,13 +65,11 @@ if (isset($_POST['login'])) {
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
                 <button name="login">Sign In</button>
-                <a href="home.php" class="roundbutton"><img src="../img/download__1_-removebg-preview.png" height="20px" width="auto"><img src="../img/home.png"></a>
+                <a href="../php/home.php"><img src="../img/"</a>
             </form>
         </div>
         <div>
-            <?php
 
-            ?>
         </div>
         <div class="overlay-container">
             <div class="overlay">
@@ -80,7 +78,6 @@ if (isset($_POST['login'])) {
                         <h1>Welcome Back!</h1>
                         <p>To keep connected with us please login with your personal info</p>
                         <button class="ghost" id="signIn">Sign In</button>
-
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>

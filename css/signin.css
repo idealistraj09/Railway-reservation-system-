@@ -251,3 +251,29 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }	
+
+a .roundbutton
+{
+	
+	border: solid 1px #99c;
+	color: #66c;
+	vertical-align: middle;
+	margin: 12px 3px 24px 3px;
+	outline: none;
+	cursor: pointer;
+	text-align: left;
+	text-decoration: none;
+	font: 18px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: 25px; 
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-moz-box-shadow:inset 0px 0px 12px #fff;
+	-webkit-box-shadow:inset 0px 0px 12px #fff;
+	box-shadow:inset 0px 0px 12px #fff;
+	line-height: 50px;
+	width: 50px;
+	align-items: left;
+	
+}
+

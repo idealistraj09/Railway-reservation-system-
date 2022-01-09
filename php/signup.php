@@ -48,7 +48,7 @@
                     <input type="text" placeholder="State" name="state" required />
 
                     <!--For Entering Address:-->
-                    <textarea resize=none placeholder="Address" name="ladd" required></textarea>
+                    <textarea rows="4" cols="38" name="ladd" placeholder="Address"></textarea>
 
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>

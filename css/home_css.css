@@ -4,6 +4,7 @@
 
 /* basic style */
 body {
+  font-weight: bold;
   padding: 0;
   margin: 0;
   font-family: 'Roboto ', sans-serif;
@@ -11,7 +12,9 @@ body {
   color: #212121;
   line-height: 1.4;
   /* background-color: #F9F9F9; */
-  border-image: url(../img/train-backround.jpg);
+  background-image: url(../img/train-backround.jpeg);
+  background-size: cover;
+  
 }
 
 /* .container {
@@ -22,25 +25,40 @@ body {
 
 /* navbar */
 .navbar {
-  padding: 20px 0;
+  padding: 1px;
   margin-bottom: 20px;
   width: 100%;
   height: auto;
   background-color: #FF4B2B;
 }
 
-.logo,
+.logo{
+  padding-left: 40px;
+  padding-top: 25px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  display: inline-block;
+  margin: 0;
+}
 .nav {
   display: inline-block;
   margin: 0;
 }
 
+.navbar3{
+  padding-bottom: 10px;
+}
+
 /* nav links */
 .nav {
+  font-size: large;
   padding: 0;
+  padding-right: 40px; 
   margin: 0;
   list-style: none;
 }
+
 
 .nav li {
   display: inline-block;
@@ -48,8 +66,9 @@ body {
 }
 
 .navbar a {
-  color: #FFF;
+  color: #000;
   text-decoration: none;
+ 
 }
 
 .navbar a:hover {
@@ -59,7 +78,8 @@ body {
 /* if you want pull right nav links */
 .nav-right {
   float: right;
-  line-height: 39px;
+  line-height: 35px;
+  
 }
 
 
@@ -123,6 +143,7 @@ button.ghost {
 }
 
 .container {
+  font-size: larger;
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -137,6 +158,9 @@ button.ghost {
 }
 
 form {
+  background-color: none;
+  font-size: large;
+  padding-top: 120px;
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -148,12 +172,14 @@ form {
 }
 
 input,select {
-	background-color: #eee;
+	background-color: rgb(235, 227, 227);
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
   border-radius: 10px;
+  font-size: 14px; 
+  font-weight: bold;
 }
 
 
@@ -161,4 +187,3 @@ input[type="submit"]{
   background-color: #FF4B2B;
   margin-bottom: 30px;
 }
-

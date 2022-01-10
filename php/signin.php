@@ -60,7 +60,8 @@
         <div class="form-container sign-in-container">
             <form action="#" method="POST">
                 <h1>Sign in</h1>
-                <span>or use your account</span>
+                <br>
+                
                 <input type="text" placeholder="User id" name="uname" />
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>

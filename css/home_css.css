@@ -14,6 +14,7 @@ body {
   /* background-color: #F9F9F9; */
   background-image: url(../img/train-backround.jpeg);
   background-size: cover;
+  backdrop-filter: blur(3px);
   
 }
 
@@ -29,7 +30,8 @@ body {
   margin-bottom: 20px;
   width: 100%;
   height: auto;
-  background-color: #FF4B2B;
+  background-color: #afd3e7;
+  
 }
 
 .logo{
@@ -72,7 +74,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #DDD;
+  color: rgb(224, 71, 71);
 }
 
 /* if you want pull right nav links */
@@ -118,8 +120,8 @@ body {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #afd3e7;
+	background-color: #afd3e7;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -184,6 +186,6 @@ input,select {
 
 
 input[type="submit"]{
-  background-color: #FF4B2B;
+  background-color: #afd3e7;
   margin-bottom: 30px;
 }

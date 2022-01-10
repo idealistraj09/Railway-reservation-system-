@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+$msg = "";
+session_start();
+if(isset($_SESSION['logged']))
+{
+  $msg = "Welcome ". $_SESSION['uname'];
+}
+?>
 
 <head>
   <meta charset="UTF-8">
@@ -15,10 +23,12 @@
     <div class="navbar2">
       <div class="navbar3">
       <h1 class="logo">Railway Reservation System</h1>
+      
+      <span><?php echo $msg; ?></span>
         <ul class="nav nav-right">
           <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">SignIn</a></li>
           <li class="menu__group"><a href="../php/signup.php" class="menu__link r-link text-underlined">SignUp</a></li>
-          <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">About Us</a></li>
+          <li class="menu__group"><a href="../include/logout.php" class="menu__link r-link text-underlined">Log Out</a></li>
           <li class="menu__group">
             <div class="datetime">
               <div class="date">
@@ -60,5 +70,6 @@
     </form>
   </div>
   <!--/.container-->
+  
 </body>
 </html>

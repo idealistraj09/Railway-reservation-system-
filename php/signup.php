@@ -55,8 +55,7 @@ if (isset($_POST['uname'])) {
         } else {
             echo "ERROR: Could not able to execute $s. " . mysqli_error($con);
         }
-    }
-    else{
+    } else {
         $msg2 = "Both Password are not matched!!!";
     }
 

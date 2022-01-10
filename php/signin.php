@@ -2,7 +2,17 @@
 session_start();
 include("../include/connection.php");
 
-if($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname']!="" && $_POST['pass'] !="") {
+if (isset($_SESSION['logged'])) {
+?>
+
+    <script>
+        alert('Your are already logged in as <?php echo $_SESSION['uname']; ?>!!!');
+        location.href = "home.php";
+    </script>
+    <?php
+}
+
+if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pass'] != "") {
     $uname = $_POST['uname'];
     $password = $_POST['pass'];
 
@@ -10,24 +20,31 @@ if($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname']!="" && $_POST['pass'
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
     $id_uname = mysqli_fetch_assoc($query);
-    
-    if ($id_count > 0) {
 
-        header('Location: home.php');
-    }
-    else{
+
+    if ($id_count > 0) {
         
+            $_SESSION['logged'] = true;
+            $_SESSION['uname'] = $uname;
+            header('Location: home.php');
+        
+    } else {
+
         ?>
-            
-        <script>alert('Your Username or Password is Incorrect !!!');</script>
-        <?php
-      
+
+        <script>
+            alert('Your Username or Password is Incorrect !!!');
+        </script>
+    <?php
+
     }
-}else if($_SERVER['REQUEST_METHOD'] == "POST"){
+} else if ($_SERVER['REQUEST_METHOD'] == "POST") {
     ?>
-            
-        <script>alert('Enter Your Login Details..');</script>
-        <?php
+
+    <script>
+        alert('Enter Your Login Details..');
+    </script>
+<?php
 }
 
 
@@ -52,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname']!="" && $_POST['pass'
                 <input type="text" placeholder="User id" name="uname" />
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
-                <button name="login" >Sign In</button>
+                <button name="login">Sign In</button>
                 <a href="../php/home.php"><img src="../img/homebt.png" height="30px" width="30px"></a>Home
             </form>
         </div>

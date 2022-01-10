@@ -6,17 +6,17 @@
         $uname = $_POST['uname'];
         $password = $_POST['pass'];
 
-        $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' AND `PasswordT`='$password'";
+        $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' ";
         $query = mysqli_query($con, $id_search);
         $id_count = mysqli_num_rows($query);
 
         if (strcasecmp($uname,$id_search)==0) {
 
-            $id_pass = mysqli_fetch_assoc($query);
-            $db_pass = $id_pass['PasswordT'];
+            //$id_pass = mysqli_fetch_assoc($query);
+            //$db_pass = $id_pass['PasswordT'];
 
-            if ($db_pass === $password) {
-                session_start();
+            // if ($db_pass === $password) {
+            //     session_start();
 ?>
     <script>
         alert("Log in succesfull ");
@@ -42,7 +42,7 @@
         }
     
     
-    }
+
 
 ?>
 

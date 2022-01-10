@@ -13,7 +13,7 @@
         <div class="form-container sign-in-container">
             <form action="#" method="POST">
                 <h1>Sign Up</h1>
-                <span>or use your account</span>
+                
                 <input type="text" placeholder="Username" name="uname" required />
                 <input type="password" placeholder="Password" name="pass" required />
                 <input type="password" placeholder="Re-Enter Password" name="repass" required />

@@ -6,17 +6,17 @@
         $uname = $_POST['uname'];
         $password = $_POST['pass'];
 
-        $id_search = "SELECT * FROM `passenger` WHERE `Admin_id`= '$uname' ";
+        $id_search = "SELECT * FROM `passenger` WHERE Admin_id='raj'";
         $query = mysqli_query($con, $id_search);
         $id_count = mysqli_num_rows($query);
 
         if (strcasecmp($uname,$id_search)==0) {
 
-            //$id_pass = mysqli_fetch_assoc($query);
-            //$db_pass = $id_pass['PasswordT'];
+            $id_pass = mysqli_fetch_assoc($query);
+            $db_pass = $id_pass['PasswordT'];
 
-            // if ($db_pass === $password) {
-            //     session_start();
+            if ($db_pass === $password) {
+                
 ?>
     <script>
         alert("Log in succesfull ");
@@ -42,7 +42,7 @@
         }
     
     
-
+    }
 
 ?>
 
@@ -65,12 +65,11 @@
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
                 <button name="login">Sign In</button>
+                <a href="../php/home.php"><img src="../img/"</a>
             </form>
         </div>
         <div>
-            <?php
 
-            ?>
         </div>
         <div class="overlay-container">
             <div class="overlay">

@@ -1,48 +1,35 @@
 <?php
-    session_start();
-    include("../include/connection.php");
+session_start();
+include("../include/connection.php");
 
-    if (isset($_POST['login'])) {
-        $uname = $_POST['uname'];
-        $password = $_POST['pass'];
+if($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname']!="" && $_POST['pass'] !="") {
+    $uname = $_POST['uname'];
+    $password = $_POST['pass'];
 
-        $id_search = "SELECT * FROM `passenger` WHERE Admin_id='raj'";
-        $query = mysqli_query($con, $id_search);
-        $id_count = mysqli_num_rows($query);
-
-        if (strcasecmp($uname,$id_search)==0) {
-
-            $id_pass = mysqli_fetch_assoc($query);
-            $db_pass = $id_pass['PasswordT'];
-
-            if ($db_pass === $password) {
-                
-?>
-    <script>
-        alert("Log in succesfull ");
-        location.replace("home.php");
-    </script>
-<?php
-            } 
-            else{
-?>
-    <script>
-        alert("Password is incorrect ");
-        
-    </script>
-<?php
-            }
-        }
-        else{
-?>
-    <script>
-        alert("Enter valid user id ");
-    </script>
-<?php
-        }
+    $id_search = "SELECT * FROM `passenger` WHERE BINARY Admin_id='$uname' AND PasswordT = '$password';";
+    $query = mysqli_query($con, $id_search);
+    $id_count = mysqli_num_rows($query);
+    $id_uname = mysqli_fetch_assoc($query);
     
-    
+    if ($id_count > 0) {
+
+        header('Location: home.php');
     }
+    else{
+        
+        ?>
+            
+        <script>alert('Your Username or Password is Incorrect !!!');</script>
+        <?php
+      
+    }
+}else{
+    ?>
+            
+        <script>alert('Enter Your Login Details..');</script>
+        <?php
+}
+
 
 ?>
 
@@ -61,16 +48,16 @@
             <form action="#" method="POST">
                 <h1>Sign in</h1>
                 <br>
-                
+
                 <input type="text" placeholder="User id" name="uname" />
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
-                <button name="login">Sign In</button>
+                <button name="login" >Sign In</button>
                 <a href="../php/home.php"><img src="../img/homebt.png" height="30px" width="30px"></a>Home
             </form>
         </div>
         <div>
- 
+
         </div>
         <div class="overlay-container">
             <div class="overlay">

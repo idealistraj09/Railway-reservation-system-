@@ -41,7 +41,7 @@ if (isset($_POST['uname'])) {
         $msg1 = "you are Already Member ";
     }
     if ($repass == $pass) {
-        $s = "INSERT INTO passenger(Admin_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
+        $s = "INSERT INTO passenger(passenger_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
 
 
         if (mysqli_query($con, $s)) {

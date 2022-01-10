@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
     $uname = $_POST['uname'];
     $password = $_POST['pass'];
 
-    $id_search = "SELECT * FROM `passenger` WHERE BINARY Admin_id='$uname' AND BINARY PasswordT = '$password';";
+    $id_search = "SELECT * FROM `passenger` WHERE BINARY passenger_id='$uname' AND BINARY PasswordT = '$password';";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
     $id_uname = mysqli_fetch_assoc($query);

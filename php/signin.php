@@ -65,11 +65,11 @@
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
                 <button name="login">Sign In</button>
-                <a href="../php/home.php"><img src="../img/"</a>
+                <a href="../php/home.php"><img src="../img/homebt.png" height="30px" width="30px"></a>Home
             </form>
         </div>
         <div>
-
+ 
         </div>
         <div class="overlay-container">
             <div class="overlay">

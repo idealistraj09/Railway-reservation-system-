@@ -74,11 +74,11 @@ if (isset($_POST['uname'])) {
 <head>
     <link rel="stylesheet" href="../css/signin.css">
     <script src="../js/signin.js"></script>
-
+    <script src="../js/time.js"></script>
     <title>sign up</title>
 </head>
 
-<body>
+<body onload="date()">
     <h1>Join us</h1><br>
     <div class="container" id="container">
 
@@ -91,8 +91,8 @@ if (isset($_POST['uname'])) {
 
 
 
-                <input type="password" placeholder="Password" name="pass" required />
-                <input type="password" placeholder="Re-Enter Password" name="repass" required />
+                <input type="password" placeholder="Password" name="pass" minlength="8" required />
+                <input type="password" placeholder="Re-Enter Password" name="repass" minlength="8" required />
                 <span style="color: red;"> <?php echo $msg2; ?> </span>
                 <input type="text" placeholder="First name" name="fname" required />
                 <input type="text" placeholder="Last name" name="lname" required />
@@ -124,7 +124,7 @@ if (isset($_POST['uname'])) {
 
                     <input type="tel" pattern="[0-9]{10}" placeholder="Phone Number" maxlength="10" name="no" required />
                     <span style="color: white;"> <?php echo $msg1; ?> </span>
-                    <input type="date" name="date1" required />
+                    <input type="date" id="dateid" name="date1" placeholder="dd-mm-yyyy" value="" min="1950-01-01" required />
                     <input type="text" placeholder="City" name="city" required />
                     <input type="text" placeholder="State" name="state" required />
 

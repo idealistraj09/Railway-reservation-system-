@@ -5,9 +5,21 @@ include("../include/connection.php");
 if (isset($_SESSION['logged'])) {
 ?>
 
-    <script>
+    <!-- <script>
         alert('Your are already logged in as <?php echo $_SESSION['uname']; ?>!!!');
         location.href = "home.php";
+    </script> -->
+    <script>
+        let text = "Your are already logged in as <?php echo $_SESSION['uname']; ?>! if you want login another account you must need to logout First. want to logout ?";
+            let isExecuted = confirm(text);
+            
+            if (isExecuted) {
+                location.href = "../include/logout.php";
+            } else {
+                location.href = "home.php";
+            }
+            
+        
     </script>
     <?php
 }
@@ -23,14 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
 
 
     if ($id_count > 0) {
-        
-            $_SESSION['logged'] = true;
-            $_SESSION['uname'] = $uname;
-            header('Location: home.php');
-        
+
+        $_SESSION['logged'] = true;
+        $_SESSION['uname'] = $uname;
+        header('Location: home.php');
     } else {
 
-        ?>
+    ?>
 
         <script>
             alert('Your Username or Password is Incorrect !!!');

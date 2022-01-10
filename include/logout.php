@@ -2,12 +2,25 @@
 
 session_start();
 include("../include/connection.php");
-session_destroy();
-?>
 
-    <script>
-        alert('You are logged out succesfuly !!!');
+
+    if(isset($_SESSION['logged']))
+    {
+        session_destroy();
+        ?>
+        <script>
+        alert('You are logged out successfully !!!');
         location.href = "../php/home.php";
-    </script>
-    <?php
+        </script>
+        <?php
+    }
+    else{
+        ?>
+        <script>
+        alert('You are already logged out !!!');
+        location.href = "../php/home.php";
+        </script>
+        <?php
+    }
+    
 ?>

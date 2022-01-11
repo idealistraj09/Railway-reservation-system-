@@ -24,10 +24,10 @@ if (isset($_POST['uname'])) {
     $ladd = mysqli_real_escape_string($con, @$_REQUEST['ladd']);
     $repass = mysqli_real_escape_string($con, @$_REQUEST['repass']);
 
-    $id_search = "SELECT * FROM `passenger` WHERE BINARY Admin_id='$uname'  ";
+    $id_search = "SELECT * FROM `passenger` WHERE BINARY passenger_id='$uname'  ";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
-    $id_uname = mysqli_fetch_assoc($query);
+    
     if ($id_count > 0) {
 
         $msg = "Username is Not Available";

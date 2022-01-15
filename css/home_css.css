@@ -30,7 +30,7 @@ body {
   margin-bottom: 20px;
   width: 100%;
   height: auto;
-  background-color: #afd3e7;
+  background-color: #FF4B2B;
   
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .navbar a:hover {
-  color: rgb(224, 71, 71);
+  color: whitesmoke;
 }
 
 /* if you want pull right nav links */
@@ -121,8 +121,8 @@ body {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #afd3e7;
-	background-color: #afd3e7;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -187,6 +187,6 @@ input,select {
 
 
 input[type="submit"]{
-  background-color: #afd3e7;
+  background-color: #FF4B2B;
   margin-bottom: 30px;
 }

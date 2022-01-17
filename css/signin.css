@@ -297,3 +297,25 @@ form h2{
 	margin-top: -15px;
 	padding-top: 0;
 }	
+img {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	transition: transform 80ms ease-in;
+	margin-top: 20px;
+}
+
+
+img:active {
+	transform: scale(0.95);
+}
+
+img:focus {
+	outline: none;
+}
+
+img.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+	margin-top: 10px;
+}

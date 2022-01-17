@@ -2,24 +2,35 @@
 session_start();
 include("../include/connection.php");
 
-if (isset($_SESSION['logged'])) {
+if (isset($_SESSION['logged_as_user'])) {
 ?>
 
-    <!-- <script>
-        alert('Your are already logged in as <?php echo $_SESSION['uname']; ?>!!!');
-        location.href = "home.php";
-    </script> -->
+
     <script>
         let text = "Your are already logged in as <?php echo $_SESSION['uname']; ?>! if you want login another account you must need to logout First. want to logout ?";
-            let isExecuted = confirm(text);
-            
-            if (isExecuted) {
-                location.href = "../include/logout.php";
-            } else {
-                location.href = "home.php";
-            }
-            
-        
+        let isExecuted = confirm(text);
+
+        if (isExecuted) {
+            location.href = "../include/logout.php";
+        } else {
+            location.href = "home.php";
+        }
+    </script>
+<?php
+}
+if (isset($_SESSION['logged_as_admin'])) {
+?>
+
+
+    <script>
+        let text = "Your are already logged in as  <?php echo $_SESSION['Admin_name']; ?>! if you want login another account you must need to logout First. want to logout ?";
+        let isExecuted = confirm(text);
+
+        if (isExecuted) {
+            location.href = "../include/logout.php";
+        } else {
+            location.href = "home.php";
+        }
     </script>
     <?php
 }
@@ -31,13 +42,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
     $id_search = "SELECT * FROM `passenger` WHERE BINARY passenger_id='$uname' AND BINARY PasswordT = '$password';";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
-    $id_uname = mysqli_fetch_assoc($query);
+
+
+    $id_search_Admin = "SELECT * FROM `admin` WHERE BINARY admin_id='$uname' AND BINARY PasswordT = '$password';";
+    $query_Admin = mysqli_query($con, $id_search_Admin);
+    $id_count_Admin = mysqli_num_rows($query_Admin);
 
 
     if ($id_count > 0) {
 
-        $_SESSION['logged'] = true;
+        $_SESSION['logged_as_user'] = true;
         $_SESSION['uname'] = $uname;
+        header('Location: home.php');
+    } elseif ($id_count_Admin > 0) {
+        $_SESSION['logged_as_admin'] = true;
+        $_SESSION['Admin_name'] = $uname;
         header('Location: home.php');
     } else {
 
@@ -81,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
                 <input type="password" placeholder="Password" name="pass" />
                 <a href="#">Forgot your password?</a>
                 <button name="login">Sign In</button>
-                <a href="../php/home.php"><img src="../img/homebt.png" height="40px" width="40px"></a>Home
+                <a href="../php/home.php"><img src="../img/homebt.png" height="30px" width="30px"></a>Home
             </form>
         </div>
         <div>

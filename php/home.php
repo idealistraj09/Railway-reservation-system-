@@ -2,10 +2,16 @@
 <html lang="en">
 <?php
 $msg = "";
+$msg1 = "";
 session_start();
-if(isset($_SESSION['logged']))
+if(isset($_SESSION['logged_as_user']))
 {
   $msg = "Welcome ". $_SESSION['uname'];
+}
+elseif(isset($_SESSION['logged_as_admin']))
+{
+  $msg = "Welcome ". $_SESSION['Admin_name'];
+  $msg1 = "Admin Panel";
 }
 ?>
 
@@ -22,10 +28,12 @@ if(isset($_SESSION['logged']))
   <nav class="navbar">
     <div class="navbar2">
       <div class="navbar3">
-      <h1 class="logo">Railway Reservation System</h1>
       
-      <span><?php echo $msg; ?></span>
+      <h1 class="logo">Railway Reservation System </h1><?php echo $msg1; ?>
+      
+      
         <ul class="nav nav-right">
+          <li><span id="welcome"><?php echo $msg; ?></span></li>
           <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">SignIn</a></li>
           <li class="menu__group"><a href="../php/signup.php" class="menu__link r-link text-underlined">SignUp</a></li>
           <li class="menu__group"><a href="../include/logout.php" class="menu__link r-link text-underlined">Log Out</a></li>

@@ -16,7 +16,10 @@ body {
   background-size: cover;
   backdrop-filter: blur(3px);
   overflow: hidden;
+<<<<<<< HEAD
+=======
   
+>>>>>>> cb7fa06dc383f6c6ce19cef2984e44badfb1d24b
 }
 
 /* .container {
@@ -85,6 +88,7 @@ body {
 .nav-right {
   float: right;
   line-height: 35px;
+  
   
 }
 
@@ -192,4 +196,8 @@ input,select {
 input[type="submit"]{
   background-color: #FF4B2B;
   margin-bottom: 30px;
+}
+#welcome{
+  
+  
 }

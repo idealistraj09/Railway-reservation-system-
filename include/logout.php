@@ -4,7 +4,7 @@ session_start();
 include("../include/connection.php");
 
 
-    if(isset($_SESSION['logged']))
+    if(isset($_SESSION['logged_as_user']) || $_SESSION['logged_as_admin'])
     {
         session_destroy();
         ?>

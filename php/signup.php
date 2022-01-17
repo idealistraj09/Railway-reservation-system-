@@ -24,33 +24,38 @@ if (isset($_POST['uname'])) {
     $ladd = mysqli_real_escape_string($con, @$_REQUEST['ladd']);
     $repass = mysqli_real_escape_string($con, @$_REQUEST['repass']);
 
-    $id_search = "SELECT * FROM `passenger` WHERE BINARY Admin_id='$uname'  ";
+
+
+    $id_search = "SELECT * FROM `passenger` WHERE BINARY passenger_id='$uname'  ";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
-    $id_uname = mysqli_fetch_assoc($query);
-    if ($id_count > 0) {
+    $id_searchAdmin = " SELECT * FROM `admin` WHERE BINARY admin_id='$uname' ";
+    $query_Admin = mysqli_query($con, $id_searchAdmin);
+    $id_count_Admin = mysqli_num_rows($query_Admin);
+    $id_search_Admin_no = " SELECT * FROM `admin` WHERE BINARY Mobile_No='$no' ";
+    $query_Admin_no = mysqli_query($con, $id_search_Admin_no);
+    $id_count_Admin_no = mysqli_num_rows($query_Admin_no);
+    $id_search_user_no = " SELECT * FROM `passenger` WHERE BINARY Mobile_No='$no' ";
+    $query_user_no = mysqli_query($con, $id_search_user_no);
+    $id_count_user_no = mysqli_num_rows($query_user_no);
+    if ($id_count > 0  || $id_count_Admin > 0) {
 
         $msg = "Username is Not Available";
-    }
-    $id_search = "SELECT * FROM `passenger` WHERE BINARY Mobile_No='$no'  ";
-    $query = mysqli_query($con, $id_search);
-    $id_count = mysqli_num_rows($query);
-    $id_uname = mysqli_fetch_assoc($query);
-    if ($id_count > 0) {
+    } elseif ($id_count_Admin_no > 0 || $id_count_user_no > 0) {
 
         $msg1 = "you are Already Member ";
     }
-    if ($repass == $pass) {
+    elseif ($repass == $pass) {
+
         $s = "INSERT INTO passenger(passenger_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
 
-
         if (mysqli_query($con, $s)) {
-            $_SESSION['logged'] = true;
+            $_SESSION['logged_as_user'] = true;
 
             echo
             "<script>
-            alert('Sign up successfully');
-        </script>";
+                alert('Sign up successfully');
+            </script>";
             header('Location: signin.php');
         } else {
             echo "ERROR: Could not able to execute $s. " . mysqli_error($con);
@@ -58,9 +63,6 @@ if (isset($_POST['uname'])) {
     } else {
         $msg2 = "Both Password are not matched!!!";
     }
-
-
-
 
 
     $con->close();

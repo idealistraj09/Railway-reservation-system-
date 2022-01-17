@@ -15,7 +15,7 @@ body {
   background-image: url(../img/train-backround.jpeg);
   background-size: cover;
   backdrop-filter: blur(3px);
-  
+  overflow: hidden;
 }
 
 /* .container {
@@ -35,9 +35,9 @@ body {
 }
 
 .logo{
-  padding-left: 40px;
-  padding-right: 300px;
-  padding-top: 25px;
+  padding-left: 20px;
+  margin-left: 0;
+  padding-top: 20px;
   align-items: center;
   justify-content: center;
   font-size: 30px;
@@ -51,6 +51,8 @@ body {
 
 .navbar3{
   padding-bottom: 10px;
+  padding-right: 0;
+  margin-right: 0;
 }
 
 /* nav links */
@@ -82,6 +84,7 @@ body {
 .nav-right {
   float: right;
   line-height: 35px;
+  
   
 }
 
@@ -189,4 +192,8 @@ input,select {
 input[type="submit"]{
   background-color: #afd3e7;
   margin-bottom: 30px;
+}
+#welcome{
+  
+  
 }

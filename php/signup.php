@@ -48,13 +48,13 @@ if (isset($_POST['uname'])) {
         $s = "INSERT INTO passenger(passenger_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
 
         if (mysqli_query($con, $s)) {
-            $_SESSION['logged_as_user'] = true;
+            
 
             echo
             "<script>
                 alert('Sign up successfully');
             </script>";
-            header('Location: signin.php');
+            header('Location: loding.php');
         } else {
             echo "ERROR: Could not able to execute $s. " . mysqli_error($con);
         }

@@ -13,7 +13,15 @@ $repass = mysqli_real_escape_string($con, @$_REQUEST['repass']);
 $otpmail = $_SESSION['otpmail'];
 if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
     if ($repass == $pass) {
-        $s = "UPDATE `passenger` SET `PasswordT`= '$pass' WHERE Email = '$otpmail'";
+
+        if($_SESSION['usermail'])
+        {
+            $s = "UPDATE `passenger` SET `PasswordT`= '$pass' WHERE Email = '$otpmail'";
+        }elseif($_SESSION['adminmail'])
+        {
+            $s = "UPDATE `admin` SET `PasswordT`= '$pass' WHERE Email = '$otpmail'";
+        }
+
         	if (mysqli_query($con, $s)) {
                 $_SESSION['newpass'] = false;
                 header('Location: signin.php');

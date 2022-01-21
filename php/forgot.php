@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 include("../include/connection.php");
 session_start();
+$_SESSION['urlright'] = false;
 if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
 
     $email = mysqli_real_escape_string($con, @$_REQUEST['founame']);
@@ -12,11 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
     $query_user_mail = mysqli_query($con, $id_search_user_mail);
     $id_count_user_mail = mysqli_num_rows($query_user_mail);
 
+    $id_search_admin_mail = " SELECT * FROM `admin` WHERE BINARY Email='$email' ";
+    $query_admin_mail = mysqli_query($con, $id_search_admin_mail);
+    $id_count_admin_mail = mysqli_num_rows($query_admin_mail);
+
     if ($id_count_user_mail) {
+        $_SESSION['usermail'] = true;
+        $_SESSION['urlright'] = true;
         $_SESSION['otpmail'] = $email;
         $_SESSION['forgatotp'] = true;
         header('Location: forgototp.php');
-    } else {
+    }elseif($id_count_admin_mail){
+        $_SESSION['adminmail'] = true;
+        $_SESSION['urlright'] = true;
+        $_SESSION['otpmail'] = $email;
+        $_SESSION['forgatotp'] = true;
+        header('Location: forgototp.php');
+    } 
+    else {
 ?>
         <script>
             alert('Email Does Not exist');
@@ -31,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
 <?PHP
 }
 
-    if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
+    if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "" && $_SESSION['urlright'] == true) {
         $_SESSION['otp'] = rand(0000, 9999);
 
         $otp = $_SESSION['otp'];

@@ -62,7 +62,7 @@ elseif(isset($_SESSION['logged_as_admin']))
   <!--/.navbar-->
   <div class="container">
     <form action="#" method="POST">
-      <h1>Book Ticket</h1>
+      <h1>Search Train</h1>
       <input type="text" placeholder="Source" name="source" id="c"> <br>
       <button onclick="swap()" type="button"><img src="../img/ex.png" height="30px" width="30px" /></button><br>
       <input type="text" placeholder="Destination" name="destination" id="d"><br>

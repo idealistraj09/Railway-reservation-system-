@@ -32,10 +32,10 @@ body {
     border-radius: 10px;
     padding: 20px;
 }
-#message1
+/* #message1
 {
     
-}
+} */
 .back{
     background-color: #483333;
     width: 40%;
@@ -43,10 +43,10 @@ body {
     border-radius: 10px;
     padding: 1px;
 }
-#message2
+/* #message2
 {
     
-}
+} */
 #resend{
     background-color: rgb(179, 56, 56);
 }

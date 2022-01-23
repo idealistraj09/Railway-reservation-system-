@@ -179,6 +179,7 @@ if (isset($_POST['click'])) {
                     <h2 id="up">Up</h2>
                     <input type="tel" pattern="[0-9]{10}" placeholder="Phone Number" maxlength="10" name="no" id="mobile" required />
                     <span style="color: white;"> <?php echo $msg1; ?> </span>
+                    <span>Date of Birth</span>
                     <input type="date" id="dateid" name="date12" placeholder="dd-mm-yyyy" value="" min="1950-01-01" required />
                     <input type="text" placeholder="City" name="city" required />
                     <input type="text" placeholder="State" name="state" required />

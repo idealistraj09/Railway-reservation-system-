@@ -14,13 +14,11 @@ body {
   /* background-color: #F9F9F9; */
   background-image: url(../img/train-backround.jpeg);
   background-size: cover;
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
   overflow: hidden;
-<<<<<<< HEAD
-=======
-  
->>>>>>> cb7fa06dc383f6c6ce19cef2984e44badfb1d24b
 }
+
+
 
 /* .container {
   margin: 0 auto;
@@ -197,7 +195,7 @@ input[type="submit"]{
   background-color: #FF4B2B;
   margin-bottom: 30px;
 }
-#welcome{
+/* #welcome{
   
   
-}
+} */

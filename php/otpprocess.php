@@ -20,16 +20,16 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 	<div class="success"></div>
 	<div class="back">
 		<div class="center">
-			<form id="#mobile-number-verification" action="#" method="post">
+			<form id="#mobile-number-verification" action="#" method="post"  style="background-color:#66fa8b">
 				<div class="mobile-row">
-					<label>OTP is sent to Your Email id</label>
+					<label>OTP is sent to your Email ID</label>
 				</div>
 				<div class="mobile-row">
-					<input type="number" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
+					<input type="tel" pattern="[0-9]{10}" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
 				</div>
 				<div class="mobile-row">
 					<button id="verify" class="btnVerify" name="otpbt">Submit OTP</button>
-					<button id="resend" class="btnVerify" name="resend" style="background-color: red;">Resend OTP</button>
+					<button id="resend" class="btnVerify" name="resend">Resend OTP</button>
 				</div>
 			</form>
 		</div>
@@ -73,7 +73,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
             $mail->Password = "Raj@2005";
 
             //Email subject
-            $mail->Subject = "OTP VARIFICATION";
+            $mail->Subject = "OTP VERIFICATION";
 
             //Set sender email
             $mail->setFrom('proxycyberton09@gmail.com');
@@ -130,7 +130,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 			$_SESSION['sendotpprocess'] = false;
 	?>
 			<script>
-				let text = "Email Id Varified Successfuly";
+				let text = "Email Id Verified Successfuly";
 				let isExecuted = alert(text);
 				location.href = "signin.php";
 			</script>
@@ -139,7 +139,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 		} else {
 		?>
 			<script>
-				alert('otp wronge !!!');
+				alert('Wrong OTP Entered!!!');
 			</script>
 	<?php
 		}

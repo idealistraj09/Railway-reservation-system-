@@ -2,7 +2,7 @@ body {
     font-size: 0.9em;
     color: #212121;
     font-family: Arial;
-    font-size: 20px;    
+    font-size: 20px;
     align-items: center;
 }
 
@@ -23,8 +23,8 @@ body {
     background:#eee;
     
 }
-.center{
-    border: black solid 1px;
+
+.center{        /* For Central part of Page*/
     width: 100%;
     align-items: center;
     margin-left: 0%;
@@ -32,16 +32,16 @@ body {
     border-radius: 10px;
     padding: 20px;
 }
+
 /* #message1
 {
     
 } */
 .back{
-    background-color: #483333;
+    background-color: #facb66;
     width: 40%;
-    height: 40%;
+    height: 45%;
     border-radius: 10px;
-    padding: 1px;
 }
 /* #message2
 {
@@ -62,6 +62,7 @@ body {
 .mobile-input {
     padding: 10px 20px;
     width: 100%;
+    font-size: medium;
     box-sizing: border-box;
     border-radius: 3px;
     border: #E0E0E0 1px solid;
@@ -118,11 +119,12 @@ body {
 .btnVerify {
     background: #4CAF50;
     padding: 8px 20px;
-    border: #449e48 1px solid;
+    border: transparent;
     border-radius: 3px;
     width: 100%;
     color: #FFF;
 }
+
 #loading-image
 {
 	display: none;

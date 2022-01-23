@@ -56,7 +56,7 @@ if (isset($_POST['click'])) {
     if ($id_count > 0  || $id_count_Admin > 0) {
         $msg = "Username is Not Available";
     } elseif ($id_count_Admin_no > 0 || $id_count_user_no > 0) {
-        $msg1 = "you are Already Member ";
+        $msg1 = "You are already part of Community. Sign In Now!";
     }elseif($id_count_user_mail > 0 || $id_count_Admin_mail){
         $msg3 = "Email id is already in use";
     } elseif ($repass == $pass) {
@@ -159,17 +159,20 @@ if (isset($_POST['click'])) {
                 <input type="text" placeholder="Last name" name="lname" required />
                 <input type="email" placeholder="Email" name="email" required />
                 <span style="color: red;"> <?php echo $msg3; ?> </span>
-                <div class="gender1" required>
-                    <label for="m" class="radio">
-                        <input type="radio" id="m" name="gender" value="male" required>Male
-                    </label>
-                    <label for="f">
-                        <input type="radio" id="f" name="gender" value="female">Female
-                    </label>
-                    <label for="o">
-                        <input type="radio" id="o" name="gender" value="Other">Other
-                    </label>
-                </div>
+
+                <span style="margin: 8px;"> Select your Gender. <!--Custom Label--> </span>
+                    <div class="gender1" required>
+                        <label for="m" class="radio">
+                            <input type="radio" id="m" name="gender" value="male" required>Male
+                        </label>
+                        <label for="f">
+                            <input type="radio" id="f" name="gender" value="female">Female
+                        </label>
+                        <label for="o">
+                            <input type="radio" id="o" name="gender" value="Other">Other
+                        </label>
+                    </div>
+
         </div>
         <div class="overlay-container">
             <div class="overlay">
@@ -178,15 +181,20 @@ if (isset($_POST['click'])) {
                 <div class="overlay-panel overlay-right">
                     <h2 id="up">Up</h2>
                     <input type="tel" pattern="[0-9]{10}" placeholder="Phone Number" maxlength="10" name="no" id="mobile" required />
-                    <span style="color: white;"> <?php echo $msg1; ?> </span>
-                    <span>Date of Birth</span>
-                    <input type="date" id="dateid" name="date12" placeholder="dd-mm-yyyy" value="" min="1950-01-01" required />
+                    
+                    <!-- <span>Date of Birth</span> -->
+                    <input type="date" id="dateid" name="date12" value="" min="1950-01-01" required />
                     <input type="text" placeholder="City" name="city" required />
                     <input type="text" placeholder="State" name="state" required />
+
                     <!--For Entering Address:-->
-                    <textarea rows="4" cols="43" name="ladd" placeholder="Address"></textarea>
+                    <textarea resize=none placeholder="Address" name="ladd" required></textarea>
+                    
+                    <span style="color: white;"> <?php echo $msg1; ?> </span>
+
                     <button class="ghost" id="signUp" name="click">Sign Up</button>
-                    <a href="signin.php"><span style="font-size: 15px;">Already have a member ? Click Here!!</span></a>
+
+                    <a href="signin.php"><span style="font-size: 15px;">Already a member? Sign In here!</span></a>
                 </div>
             </div>
         </div>

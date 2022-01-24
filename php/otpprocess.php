@@ -85,7 +85,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 			$mail->AddAttachment('otp.jpg');
 
             //Email body
-            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR RESET PASSWORD IS  '.$otp.'</p>'
+            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR VARIFY E-MAIL IS  '.$otp.'</p>'
 								.'<img src="cid:otp">';
 
             //Add recipient

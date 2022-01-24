@@ -184,17 +184,17 @@ if (isset($_POST['click'])) {
                     
                     <!-- <span>Date of Birth</span> -->
                     <input type="date" id="dateid" name="date12" value="" min="1950-01-01" required />
-                    <input type="text" placeholder="City" name="city" required />
-                    <input type="text" placeholder="State" name="state" required />
+                    <input type="text" placeholder="City" name="city" required onkeydown="upperCaseF(this)"/>
+                    <input type="text" placeholder="State" name="state" required onkeydown="upperCaseF(this)"/>
 
                     <!--For Entering Address:-->
-                    <textarea resize=none placeholder="Address" name="ladd" required></textarea>
+                    <textarea resize=none placeholder="Address" name="ladd" required onkeydown="upperCaseF(this)"></textarea>
                     
                     <span style="color: white;"> <?php echo $msg1; ?> </span>
 
                     <button class="ghost" id="signUp" name="click">Sign Up</button>
 
-                    <a href="signin.php"><span style="font-size: 15px;">Already a member? Sign In here!</span></a>
+                    <a class="labelsignin" href="signin.php"><span style="font-size: 15px;">Already a member? Sign In here!</span></a>
                 </div>
             </div>
         </div>

@@ -63,9 +63,9 @@ elseif(isset($_SESSION['logged_as_admin']))
   <div class="container">
     <form action="#" method="POST">
       <h1>Search Train</h1>
-      <input type="text" placeholder="Source" name="source" id="c"> <br>
+      <input type="text" placeholder="Source" name="source" id="c" onkeydown="upperCaseF(this)"> <br>
       <button onclick="swap()" type="button"><img src="../img/ex.png" height="30px" width="30px" /></button><br>
-      <input type="text" placeholder="Destination" name="destination" id="d"><br>
+      <input type="text" placeholder="Destination" name="destination" id="d" onkeydown="upperCaseF(this)"><br>
       <input type="date" name="date">
       <select name="seat" id="" require>
         <option value="">--Select--</option>

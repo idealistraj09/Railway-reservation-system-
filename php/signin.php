@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
                 <br>
                 <input type="text" placeholder="User id" name="uname" />
                 <input type="password" placeholder="Password" name="pass" />
-                <a href="forgot.php">Forgot your password?</a>
+                <a href="forgot.php" class="labelsignin">Forgot your password?</a>
                 <button name="login">Sign In</button>
                 <a href="../php/home.php"><img src="../img/homebt.png" height="40px" width="40px"></a>Home
             </form>

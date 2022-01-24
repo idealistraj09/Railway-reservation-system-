@@ -18,6 +18,7 @@ body {
 	height: 100vh;
 	margin: -20px 0 50px;
 	flex-direction: column;
+	
 }
 
 h1 {
@@ -93,13 +94,15 @@ textarea{
 	border-color: #eee;
 	padding:12px 15px;
 	margin: 7px;
-	font-size:15px;
+	border-radius: 5px;
 	font-family: sans-serif;
 	width:100%;
 	height:80px;
 	resize: none;
 }
-
+.labelsignin:hover{
+	color: rgb(29, 32, 211);
+}
 input {
 	background-color: #eee;
 	border: none;

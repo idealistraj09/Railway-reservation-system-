@@ -98,3 +98,8 @@ function swap() {
   document.getElementById("c").value = document.getElementById("d").value;
   document.getElementById("d").value = tmp;
 }
+function upperCaseF(a){
+  setTimeout(function(){
+      a.value = a.value.toUpperCase();
+  }, 1);
+}

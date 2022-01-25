@@ -22,7 +22,7 @@ if (isset($_POST['sendotp'])) {
     } else {
     ?>
         <script>
-            alert('otp wronge !!!');
+            alert('Wrong OTP !!!');
         </script>
     <?php
     }
@@ -45,7 +45,7 @@ if (isset($_POST['sendotp'])) {
             <form action="#" method="POST">
                 <h1>Account Recovery</h1>
                 <br><br>
-                <input type="number" placeholder="OTP" name="otppass" />
+                <input type="tel" pattern="[0-9]{10}" placeholder="OTP" name="otppass" />
 
                 <br><br>
                 <button name="sendotp">Submit OTP</button>

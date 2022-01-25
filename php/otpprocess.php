@@ -25,7 +25,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 					<label>OTP is sent to your Email ID</label>
 				</div>
 				<div class="mobile-row">
-					<input type="number" pattern="[0-9]{10}" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
+					<input type="tel" pattern="[0-9]{10}" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
 				</div>
 				<div class="mobile-row">
 					<button id="verify" class="btnVerify" name="otpbt">Submit OTP</button>
@@ -85,7 +85,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 			$mail->AddAttachment('otp.jpg');
 
             //Email body
-            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR VARIFY E-MAIL IS  '.$otp.'</p>'
+            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP TO VERIFY E-MAIL IS  '.$otp.'</p>'
 								.'<img src="cid:otp">';
 
             //Add recipient

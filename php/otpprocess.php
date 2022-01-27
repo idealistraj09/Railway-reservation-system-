@@ -25,7 +25,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 					<label>OTP is sent to your Email ID</label>
 				</div>
 				<div class="mobile-row">
-					<input type="tel" pattern="[0-9]{10}" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
+					<input type="number" pattern="[0-9]{10}" id="mobileOtp" class="mobile-input" placeholder="Enter the OTP" name="otp">
 				</div>
 				<div class="mobile-row">
 					<button id="verify" class="btnVerify" name="otpbt">Submit OTP</button>

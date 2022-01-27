@@ -45,7 +45,7 @@ if (isset($_POST['sendotp'])) {
             <form action="#" method="POST">
                 <h1>Account Recovery</h1>
                 <br><br>
-                <input type="tel" pattern="[0-9]{10}" placeholder="OTP" name="otppass" />
+                <input type="number" pattern="[0-9]{10}" placeholder="OTP" name="otppass" />
 
                 <br><br>
                 <button name="sendotp">Submit OTP</button>

@@ -1,0 +1,257 @@
+/*
+* This is not complete design, it needed to be fixed, especially rwd.
+*/
+
+/* basic style */
+body {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto ", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: #ff4b2b;
+}
+
+.logo {
+  padding-left: 20px;
+  margin-left: 0;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  display: inline-block;
+  margin: 0;
+}
+.nav {
+  display: inline-block;
+  margin: 0;
+}
+
+.navbar3 {
+  padding-bottom: 10px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+/* nav links */
+.nav {
+  font-size: large;
+  padding: 0;
+  padding-right: 40px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: whitesmoke;
+}
+
+/* if you want pull right nav links */
+.nav-right {
+  float: right;
+  line-height: 35px;
+}
+.container {
+   font-size: 110%;
+    float: left;
+    height: 88.9%;
+    width: 20%;
+    position: absolute;
+    
+    
+  display: flex;
+  margin-left: 5%;
+}
+
+.container_top {
+    
+    margin-top: 5%;
+    position: absolute;
+    background-color: rgb(217, 240, 217);
+    height: 32%;
+    width: 98%;
+    align-items: center;
+    border-radius: 3px;
+}
+.container_buttom {
+    margin-top: 73%;
+    float: left;  
+  background-color: rgb(217, 240, 217);
+  height: 32%;
+  width: 98%;
+  position: absolute;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.container_middel {
+  margin-top: auto;
+  background-color: rgb(217, 240, 217);
+  height: 32%;
+  width: 98%;
+  align-items: center;
+  border-radius: 3px;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    margin-bottom: 3%;
+    
+}
+ul li span{
+  
+    margin-top: 0%;
+    margin-left: 10px;
+}
+.titlefilter{
+  color: rgb(236, 70, 19);
+  text-transform: uppercase;
+  text-decoration: double;
+}
+ul li input{
+    border: 2px solid black;
+    border-radius: 20px;
+    zoom: 1.3;
+}
+.main
+{
+    background-color: rgb(217, 240, 217);
+    position: absolute;
+    float: right;
+    margin-left: 28%;
+    margin-top: 1%;
+    height: 200%;
+    max-height: 90%;
+    width: 60%;
+    overflow-y: scroll;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#thumb-wrap {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  writing-mode: bt-lr;    /* IE */
+  -webkit-appearance: none;
+  background-color: rgb(207, 213, 233);
+ }
+#thumb-wrap::-webkit-scrollbar {
+  width: 33.2rem;
+ }
+#thumb-wrap::-webkit-scrollbar-button:horizontal:decrement {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("https://cdn-ak.f.st-hatena.com/images/fotolife/O/O2_milk/20190228/20190228080158.png") no-repeat center center;
+  
+ }
+#thumb-wrap::-webkit-scrollbar-button:horizontal:increment {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("https://cdn-ak.f.st-hatena.com/images/fotolife/O/O2_milk/20190228/20190228080155.png") no-repeat center center;
+  
+  
+ }
+#thumb-wrap ul {
+  width: 100%;
+  
+  white-space: nowrap;
+  padding: 0%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+ }
+#thumb-wrap li {
+  display: inline-block;
+  margin-bottom: 0%;
+ 
+ }
+#thumb-wrap li:first-child {
+  margin-left: 1rem;
+ }
+#thumb-wrap li:last-child {
+  margin-right: 1rem;
+ }
+#thumb-wrap li + li {
+  margin-left: 1rem;
+ }
+ #thumb-wrap li button{
+   position: relative;
+   height: 70px;
+   width: 100px;
+   left: 0%;
+   right: 0%;
+   border-radius: 4px;
+   display: block;
+ }
+ #thumb-wrap li button:hover{
+   background-color: aquamarine;
+ }
+ .maintrain{
+   position: relative;
+   background-color: rgb(201, 209, 236);
+   height: 100%;
+   width: 100%;
+   border-radius: 3px;
+   align-items: center;
+   text-align: center;
+   
+ }
+ .ultrains{
+   align-items: center;
+   position: relative;
+   background-color: rgb(201, 209, 236);
+   height: 75%;
+   width: 92%;
+   left: 1.8%;
+   border-radius: 3px;
+   justify-content: center;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+.ultrains::-webkit-scrollbar{
+  background-color: rgb(191, 148, 204);
+}
+.ultrains::-webkit-scrollbar-thumb{
+  background-color: rgb(154, 192, 164);
+  border-radius: 20px;
+  border: 1px solid black;
+  
+}
+
+.trains{
+  position: relative;
+  display: block;
+   background-color: rgb(192, 191, 202);
+   height: 200px;
+   top: 20px;
+   right: 4%;
+   width: 810px;
+   border: 1px solid rgb(126, 121, 197);
+   border-radius: 3px;
+   
+}

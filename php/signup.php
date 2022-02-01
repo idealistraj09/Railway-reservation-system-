@@ -182,7 +182,8 @@ if (isset($_POST['click'])) {
                     <h2 id="up">Up</h2>
                     <input type="tel" pattern="[0-9]{10}" placeholder="Phone Number" maxlength="10" name="no" id="mobile" required />
                     
-                    <!-- <span>Date of Birth</span> -->
+                    <span>Date of Birth</span>
+
                     <input type="date" id="dateid" name="date12" value="" min="1950-01-01" required />
                     <input type="text" placeholder="City" name="city" required onkeydown="upperCaseF(this)"/>
                     <input type="text" placeholder="State" name="state" required onkeydown="upperCaseF(this)"/>

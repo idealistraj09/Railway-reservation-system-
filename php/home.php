@@ -4,16 +4,16 @@
 $msg = "";
 $msg1 = "";
 session_start();
-if(isset($_SESSION['logged_as_user']))
-{
-  $msg = "Welcome ". $_SESSION['uname'];
-}
-elseif(isset($_SESSION['logged_as_admin']))
-{
-  $msg = "Welcome ". $_SESSION['Admin_name'];
+include("../include/connection.php");
+if (isset($_SESSION['logged_as_user'])) {
+  $msg = "Welcome " . $_SESSION['uname'];
+} elseif (isset($_SESSION['logged_as_admin'])) {
+  $msg = "Welcome " . $_SESSION['Admin_name'];
   $msg1 = "Admin Panel";
 }
+
 ?>
+
 
 <head>
   <meta charset="UTF-8">
@@ -23,15 +23,14 @@ elseif(isset($_SESSION['logged_as_admin']))
   <link rel="stylesheet" href="../css/home_css.css">
   <script src="../js/time.js"></script>
 </head>
+
 <body onload="initClock()">
   <!-- navbar -->
   <nav class="navbar">
     <div class="navbar2">
       <div class="navbar3">
-      
-      <h1 class="logo">Railway Reservation System </h1><?php echo $msg1; ?>
-      
-      
+
+        <h1 class="logo">Railway Reservation System </h1><?php echo $msg1; ?>
         <ul class="nav nav-right">
           <li><span id="welcome"><?php echo $msg; ?></span></li>
           <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">SignIn</a></li>
@@ -63,10 +62,22 @@ elseif(isset($_SESSION['logged_as_admin']))
   <div class="container">
     <form action="#" method="POST">
       <h1>Search Train</h1>
-      <input type="text" placeholder="Source" name="source" id="c" onkeydown="upperCaseF(this)"> <br>
+      <select name="source" id="c" required> <br>
+        <option>--Source Station--</option>
+        <option>SURAT</option>
+        <option>RAJKOT</option>
+        <option>ANAND</option>
+        <option>BARODA</option>
+      </select>
       <button onclick="swap()" type="button"><img src="../img/ex.png" height="30px" width="30px" /></button><br>
-      <input type="text" placeholder="Destination" name="destination" id="d" onkeydown="upperCaseF(this)"><br>
-      <input type="date" name="date">
+      <select name="destination" id="d" required>
+        <option>--Destination Station--</option>
+        <option>SURAT</option>
+        <option>RAJKOT</option>
+        <option>ANAND</option>
+        <option>BARODA</option>
+      </select><br>
+      <input type="date" name="date" required>
       <select name="seat" id="" require>
         <option value="">--Select--</option>
         <option value="acseat">AC seat</option>
@@ -74,10 +85,34 @@ elseif(isset($_SESSION['logged_as_admin']))
         <option value="sleeper">Sleeper</option>
         <option value="seater">Seater</option>
       </select><br>
-      <input type="submit" name="search" value="Search" formAction="show.php">
+      <input type="submit" name="search" value="Search">
     </form>
   </div>
   <!--/.container-->
-  
+
 </body>
+<?php
+
+if (isset($_POST['search'])) {
+  if (isset($_SESSION['logged_as_user'])) {
+
+
+    $_SESSION['sstation'] = mysqli_real_escape_string($con, @$_REQUEST['source']);
+    $_SESSION['dstation'] = mysqli_real_escape_string($con, @$_REQUEST['destination']);
+
+
+
+    header('Location: show.php');
+  } else {
+?>
+    <script>
+      alert('You need to Sign in First');
+    </script>
+<?php
+  }
+}
+
+
+?>
+
 </html>

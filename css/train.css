@@ -217,19 +217,18 @@ ul li input{
    height: 100%;
    width: 100%;
    border-radius: 3px;
-   align-items: center;
-   text-align: center;
+   
    
  }
  .ultrains{
-   align-items: center;
+   
    position: relative;
    background-color: rgb(201, 209, 236);
    height: 75%;
    width: 92%;
    left: 1.8%;
    border-radius: 3px;
-   justify-content: center;
+   
    overflow-y: scroll;
    overflow-x: hidden;
 }
@@ -245,7 +244,7 @@ ul li input{
 
 .trains{
   position: relative;
-  display: block;
+  display: inline-block;
    background-color: rgb(192, 191, 202);
    height: 200px;
    top: 20px;
@@ -254,4 +253,44 @@ ul li input{
    border: 1px solid rgb(126, 121, 197);
    border-radius: 3px;
    
+}
+.trainname{
+  
+  margin-left: 2%;
+  color: black;
+
+}
+.traintime{
+  margin: 0%;
+  padding: 0%;
+  margin-left: 30%;
+  margin-top: 0%;
+  font-size: 20px;
+  margin-right: 2%;
+}
+.traindate{
+  margin: 0%;
+  padding: 0%;
+  margin-left: 47%;
+  padding-bottom: 2%;
+  
+}
+.traindtime{
+  margin: 0%;
+  padding: 0%;
+  margin-left: 2%;
+
+  margin-top: 0%;
+  font-size: 20px;
+}
+.design
+{
+  color: rgb(5, 10, 10);
+  font-size: 20px;
+  transition: font-size 0.2s;
+  transition: color 0.2s;
+}
+.design:hover{
+  font-size: 21px;
+  color: rgb(73, 35, 211);
 }

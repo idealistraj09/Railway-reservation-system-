@@ -122,7 +122,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 		$repass = $_SESSION['repass'];
 
 		if ($urno == $otp) {
-			$s = "INSERT INTO passenger(passenger_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
+			$s = "INSERT INTO user(user_id, PasswordT, First_Name, Last_Name, Email, Gender, Mobile_No, Date_of_birth, City, StateT, Local_address) VALUES ('$uname','$pass','$fname','$lname','$email','$drone','$no','$date1','$city','$state','$ladd' );";
 			if (mysqli_query($con, $s)) {
 			} else {
 				echo "ERROR: Could not able to execute $s. " . mysqli_error($con);

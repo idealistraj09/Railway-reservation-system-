@@ -1,0 +1,106 @@
+.main1{
+
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.getdata{
+    align-self: center;
+    margin-left: 20px;
+    height: 580px;
+    width: 98%;
+    margin-top: 0px;
+    bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+    background-color: aqua;
+}
+form{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 10%;
+    margin: 0%;
+    position: relative;
+    display: flex;
+    background-color: rgb(42, 144, 190);
+    border-radius: 20px;
+    width: 80%;
+    height: 500px;
+    margin: 20px;
+    margin-top: 0%;
+    padding: 20px;
+    flex-direction: column;
+}
+.part1,.part2,.part3{
+   border: 2px solid black;
+   border-radius: 10px;
+   margin-left: 20px;
+   padding: 10px;
+   position: relative;
+   left: 30%;
+   width: 35%;
+   
+}
+.upper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+.gender1{
+    margin-left: 20%;
+    margin-right: 20%;
+    float: left;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 65px;
+    flex-direction: row;
+    
+}
+
+label{
+    margin-top: 10px;
+    padding-bottom: 0px;
+    height: 50px;
+}
+.button1{
+        
+}
+#signUp{
+    width: 140px;
+    height: 40px;
+}
+body{
+    overflow-y: scroll;
+}
+input{
+    width: 250px;
+}
+input[type="radio"]
+{
+    width: 40px;
+    
+}
+.part3{
+    display: none;
+}
+.part2{
+    display: none;
+}
+#signUp1{
+    width: 120px;
+    display: none;
+}
+#signUp12{
+    width: 120px;
+    display: none;
+}
+#add2,#add3{
+    display: none;
+}

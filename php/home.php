@@ -63,28 +63,36 @@ if (isset($_SESSION['logged_as_user'])) {
     <form action="#" method="POST">
       <h1>Search Train</h1>
       <select name="source" id="c" required> <br>
-        <option>--Source Station--</option>
-        <option>SURAT</option>
-        <option>RAJKOT</option>
-        <option>ANAND</option>
-        <option>BARODA</option>
+        <option selected disabled value="">--Source Station--</option>
+        <?php
+          $des_search = "select DISTINCT(Source_station_id) from tour;";
+          if($query_des = mysqli_query($con, $des_search)){}else{echo mysqli_error($con);};
+          $des = mysqli_fetch_assoc($query_des);
+          while($des){
+            echo "<option>"."$des[Source_station_id]"."</option>";
+            $des = mysqli_fetch_assoc($query_des);
+          }
+
+        ?>
       </select>
       <button onclick="swap()" type="button"><img src="../img/ex.png" height="30px" width="30px" /></button><br>
       <select name="destination" id="d" required>
-        <option>--Destination Station--</option>
-        <option>SURAT</option>
-        <option>RAJKOT</option>
-        <option>ANAND</option>
-        <option>BARODA</option>
+        <option selected disabled value="">--Destination Station--</option>
+        <?php
+          $des_search = "select DISTINCT(Destination_station_id) from tour;";
+          if($query_des = mysqli_query($con, $des_search)){}else{echo mysqli_error($con);};
+          $des = mysqli_fetch_assoc($query_des);
+          while($des){
+            echo "<option>"."$des[Destination_station_id]"."</option>";
+            $des = mysqli_fetch_assoc($query_des);
+          }
+
+        ?>
+        
+        
       </select><br>
       <input type="date" name="date" required>
-      <select name="seat" id="" require>
-        <option value="">--Select--</option>
-        <option value="acseat">AC seat</option>
-        <option value="nonac">Non AC</option>
-        <option value="sleeper">Sleeper</option>
-        <option value="seater">Seater</option>
-      </select><br>
+      <br>
       <input type="submit" name="search" value="Search">
     </form>
   </div>
@@ -96,13 +104,19 @@ if (isset($_SESSION['logged_as_user'])) {
 if (isset($_POST['search'])) {
   if (isset($_SESSION['logged_as_user'])) {
 
-
+    if($_REQUEST['source']==$_REQUEST['destination']){
+      ?>  
+        <script>alert('SOURCE AND DESTINATION STATION IS SAME SELECT DIFFRENT TO CONTINUE')</script>
+      <?php
+    }else{
     $_SESSION['sstation'] = mysqli_real_escape_string($con, @$_REQUEST['source']);
     $_SESSION['dstation'] = mysqli_real_escape_string($con, @$_REQUEST['destination']);
-
-
-
+    $_SESSION['datebook'] = mysqli_real_escape_string($con, @$_REQUEST['date']);
     header('Location: show.php');
+  }
+
+
+    
   } else {
 ?>
     <script>
@@ -110,6 +124,7 @@ if (isset($_POST['search'])) {
     </script>
 <?php
   }
+  
 }
 
 

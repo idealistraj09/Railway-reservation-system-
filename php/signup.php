@@ -32,7 +32,7 @@ if (isset($_POST['click'])) {
 
 
 
-    $id_search = "SELECT * FROM `passenger` WHERE BINARY passenger_id='$uname'  ";
+    $id_search = "SELECT * FROM `user` WHERE BINARY user_id='$uname'  ";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
     $id_searchAdmin = " SELECT * FROM `admin` WHERE BINARY admin_id='$uname' ";
@@ -42,14 +42,14 @@ if (isset($_POST['click'])) {
     $id_search_Admin_no = " SELECT * FROM `admin` WHERE BINARY Mobile_No='$no' ";
     $query_Admin_no = mysqli_query($con, $id_search_Admin_no);
     $id_count_Admin_no = mysqli_num_rows($query_Admin_no);
-    $id_search_user_no = " SELECT * FROM `passenger` WHERE BINARY Mobile_No='$no' ";
+    $id_search_user_no = " SELECT * FROM `user` WHERE BINARY Mobile_No='$no' ";
     $query_user_no = mysqli_query($con, $id_search_user_no);
     $id_count_user_no = mysqli_num_rows($query_user_no);
 
     $id_search_Admin_mail = " SELECT * FROM `admin` WHERE BINARY Email='$email' ";
     $query_Admin_mail = mysqli_query($con, $id_search_Admin_mail);
     $id_count_Admin_mail = mysqli_num_rows($query_Admin_mail);
-    $id_search_user_mail = " SELECT * FROM `passenger` WHERE BINARY Email='$email' ";
+    $id_search_user_mail = " SELECT * FROM `user` WHERE BINARY Email='$email' ";
     $query_user_mail = mysqli_query($con, $id_search_user_mail);
     $id_count_user_mail = mysqli_num_rows($query_user_mail);
 

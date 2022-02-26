@@ -106,8 +106,8 @@
         </div>
 
     </nav>
-    <div class="main1">
-        <div class="getdata">
+    <div class=".main1">
+        <div class=".getdata">
             <form action="#" method="POST">
                 <div class="upper">
                     <div class="part1" id="part1">

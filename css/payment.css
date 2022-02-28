@@ -22,6 +22,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+
 html {
   line-height: 1;
 }
@@ -68,7 +69,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 body {
-  background-color: #b3e5fc;
+  /* background-color: #b3e5fc; */
+  background-image: url(../img/train-backround.jpeg); 
+  background-size: 1920px;
+  background-position: center;
 }
 
 .wrapper {
@@ -323,7 +327,7 @@ body {
 }
 .logo{
     display: flex;
-    background-color: #00b0ff;
+    background-color: #FF4B2B;
     font-size: 40px;
     justify-content: center;
     padding: 10px;
@@ -331,11 +335,11 @@ body {
 .menu__group{
     display: flex;
     padding-left: 45%;
-    background-color: aqua;
+    background-color: rgb(235, 232, 232);
 }
 .bill{
     
-    background-color: #ff9900;
+    background-color: #ffffff;
     height: 450px;
     width: 40%;
     float: left;
@@ -343,6 +347,7 @@ body {
     margin-left: 100px;
     z-index: 0;
     border: #00b0ff solid 2px;
+    border-radius: 20px;
 }
 .minibill{
     
@@ -365,6 +370,35 @@ body {
     justify-items: center;
     justify-self: center;
 }
-.submit{
+/* .submit{
     color: #00b0ff;
+
+} */
+
+.submit {
+	cursor: pointer;
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.submit:active {
+	transform: scale(0.95);
+}
+
+.submit:focus {
+	outline: none;
+}
+
+.submit.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+	margin-top: 10px;
 }

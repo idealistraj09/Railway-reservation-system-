@@ -90,13 +90,11 @@
             </div>
         </div>
     </div>
-    <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
+    <div class="print">
+        <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
+    </div>
         <?php
-
-
-
-
-
+        
         ?>
 </body>
 

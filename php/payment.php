@@ -137,7 +137,7 @@
                             <input type="text" class="csv">
                         </div>
                     </div>
-                    <div class="grup submit-group">
+                    <div class="group submit-group">
                         <span class="arrow"></span>
                         <input type="submit" class="submit" name="submit1">
                     </div>

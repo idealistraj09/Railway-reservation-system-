@@ -106,8 +106,8 @@
         </div>
 
     </nav>
-    <div class="main1">
-        <div class="getdata">
+    <div class=".main1">
+        <div class=".getdata">
             <form action="#" method="POST">
                 <div class="upper">
                     <div class="part1" id="part1">
@@ -176,7 +176,7 @@
                         <span>Date of Birth</span><br>
                         <input type='date' id='dateid3' name='date123' value=''  min='1950-01-01'    />
                         <input type='text' placeholder='City' name='city3' id="city3"   onkeydown='upperCaseF(this)'  />
-                        <button type='button' id='signUp12' name='hidepass23'  onclick='hide3();'>REMOVE</button>
+                        <button type='button' id='signUp' name='hidepass23'  onclick='hide3();'>REMOVE</button>
                         <button type='button' id='add3' name='addpass33'  onclick='addth();'>Add passenger</button>
                     </div>
                     

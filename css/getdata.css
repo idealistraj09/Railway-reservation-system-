@@ -17,9 +17,9 @@
     bottom: 10px;
     align-items: center;
     justify-content: center;
-    text-align: center;  
-    background-color: aqua;
+    text-align: center;
 }
+
 form{
     align-items: center;
     justify-content: center;
@@ -37,6 +37,7 @@ form{
     padding: 20px;
     flex-direction: column;
 }
+
 .part1,.part2,.part3{
    border: 2px solid black;
    border-radius: 10px;
@@ -48,6 +49,9 @@ form{
    
 }
 .upper{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     display: flex;
     flex-direction: row;
     margin-top: 5%;

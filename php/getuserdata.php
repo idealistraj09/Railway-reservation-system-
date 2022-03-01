@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home_css.css">
     <link rel="stylesheet" href="../css/getdata.css">
+    <link rel="stylesheet" href="../css/allinone.css">
     <script src="../js/scroll.js"></script>
     <title>RRS - ADD passenger</title>
 </head>

@@ -137,7 +137,7 @@ if (isset($_POST['click'])) {
 
 <head>
     <link rel="stylesheet" href="../css/signin.css">
-    
+    <link rel="stylesheet" href="../css/allinone.css">
     <script src="../js/time.js"></script>
 
     <title>sign up</title>

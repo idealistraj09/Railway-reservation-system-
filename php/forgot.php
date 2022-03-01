@@ -122,6 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
 <head>
     <link rel="stylesheet" href="../css/signin.css">
     <script src="../js/time.js"></script>
+    <link rel="stylesheet" href="../css/allinone.css">
     <title>Forgot password</title>
 </head>
 

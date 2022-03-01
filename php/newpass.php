@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
     <link rel="stylesheet" href="../css/signin.css">
     <script src="../js/time.js"></script>
     <title>RESET PASSWORD</title>
+    <link rel="stylesheet" href="../css/allinone.css">
 </head>
 
 <body>

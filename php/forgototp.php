@@ -34,6 +34,7 @@ if (isset($_POST['sendotp'])) {
 
 <head>
     <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/allinone.css">
     <script src="../js/time.js"></script>
     <title>Forgot password</title>
 </head>

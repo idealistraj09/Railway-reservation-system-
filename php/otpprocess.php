@@ -16,6 +16,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 <body>
 	<link href="../css/otp.css" type="text/css" rel="stylesheet" />
 	<link href="../css/signin.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/allinone.css">
 	<div class="err"></div>
 	<div class="success"></div>
 	<div class="back">

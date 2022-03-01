@@ -16,8 +16,19 @@ body {
   background-size: cover;
   /* backdrop-filter: blur(3px); */
   overflow: hidden;
+  animation: bodyt 1s;
 }
-
+@keyframes bodyt{
+  0%{
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+  
+}
 
 
 /* .container {

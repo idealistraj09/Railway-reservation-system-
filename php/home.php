@@ -33,8 +33,8 @@ if (isset($_SESSION['logged_as_user'])) {
         <h1 class="logo">Railway Reservation System </h1><?php echo $msg1; ?>
         <ul class="nav nav-right">
           <li><span id="welcome"><?php echo $msg; ?></span></li>
-          <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">SignIn</a></li>
-          <li class="menu__group"><a href="../php/signup.php" class="menu__link r-link text-underlined">SignUp</a></li>
+          <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">Sign In</a></li>
+          <li class="menu__group"><a href="../php/signup.php" class="menu__link r-link text-underlined">Sign  Up</a></li>
           <li class="menu__group"><a href="../include/logout.php" class="menu__link r-link text-underlined">Log Out</a></li>
           <li class="menu__group">
             <div class="datetime">

@@ -231,6 +231,7 @@ function addpart3(){
   document.getElementById("city3").setAttribute("required","");
 }
 function removepart2(){
+  document.getElementById("fname2").value = '';
   document.getElementById("fname2").removeAttribute("required","");
   document.getElementById("lname2").removeAttribute("required","");
   document.getElementById("email2").removeAttribute("required","");
@@ -241,6 +242,7 @@ function removepart2(){
   
 }
 function removepart3(){
+  document.getElementById("fname3").value = '';
   document.getElementById("fname3").removeAttribute("required","");
   document.getElementById("lname3").removeAttribute("required","");
   document.getElementById("email3").removeAttribute("required","");

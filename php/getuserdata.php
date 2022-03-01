@@ -111,6 +111,7 @@
             <form action="#" method="POST">
                 <div class="upper">
                     <div class="part1" id="part1">
+                        <span>First Passenger</span>
                         <input type="text" placeholder="First name" name="fname" required />
                         <input type="text" placeholder="Last name" name="lname" required />
                         <input type="email" placeholder="Email" name="email" required /><br>

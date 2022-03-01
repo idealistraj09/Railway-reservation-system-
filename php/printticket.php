@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="../css/print.css">
-    
+
     <script src="../js/time.js"></script>
 
 
@@ -19,11 +19,32 @@
 
     session_start();
     include("../include/connection.php");
-            $s = strval($_SESSION['Fname2']) . strval($_SESSION['Lname2']);
-            $select_pass2 = "select * from `seat` where Date='$_SESSION[clicked]' and passsenger_id='$s' and Seat_cat_id='$_SESSION[clickes]' and Train_id='$_SESSION[clicket]';";
-            if($query2 = mysqli_query($con, $select_pass2)){}else{echo mysqli_error($con);};
-            $row = mysqli_fetch_array($query2);
-
+    $s = strval($_SESSION['Fname']) . strval($_SESSION['Lname']);
+    $space = " ";
+    $select_pass2 = "select * from `seat` where Date='$_SESSION[clicked]' and passsenger_id='$s' and Seat_cat_id='$_SESSION[clickes]' and Train_id='$_SESSION[clicket]';";
+    if ($query2 = mysqli_query($con, $select_pass2)) {
+    } else {
+        echo mysqli_error($con);
+    }
+    $row = mysqli_fetch_array($query2);
+    if ($_SESSION['Fname2'] != "") {
+        $s1 = strval($_SESSION['Fname2']) . strval($_SESSION['Lname2']);
+        $select_pass3 = "select * from `seat` where Date='$_SESSION[clicked]' and passsenger_id='$s1' and Seat_cat_id='$_SESSION[clickes]' and Train_id='$_SESSION[clicket]';";
+        if ($query3 = mysqli_query($con, $select_pass3)) {
+        } else {
+            echo mysqli_error($con);
+        }
+        $row2 = mysqli_fetch_array($query3);
+    }
+    if ($_SESSION['Fname3'] != "") {
+        $s2 = strval($_SESSION['Fname3']) . strval($_SESSION['Lname3']);
+        $select_pass4 = "select * from `seat` where Date='$_SESSION[clicked]' and passsenger_id='$s2' and Seat_cat_id='$_SESSION[clickes]' and Train_id='$_SESSION[clicket]';";
+        if ($query4 = mysqli_query($con, $select_pass4)) {
+        } else {
+            echo mysqli_error($con);
+        }
+        $row3 = mysqli_fetch_array($query4);
+    }
 
 
     ?>
@@ -71,33 +92,65 @@
                     <li><span class="lispan">One Passenger Fare:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['fare'] . "₹"; ?></span></li><br>
                     <li><span class="lispan">Total Passenger:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['Tpassenger']; ?></span></li><br>
                     <li><span class="lispan">Total Fare:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['totalfare'] . "₹"; ?></span></li><br>
-                    
+
                 </ul>
             </div>
         </div>
         <div class="bill2">
             <div class="minibill">
                 <ul><br>
-                    <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname'],$_SESSION['Lname2']; ?></span></li><br>
+                    <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname'],$space, $_SESSION['Lname']; ?></span></li><br>
                     <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid']; ?></span></li><br>
                     <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender']; ?></span></li><br>
-                    <li><span class="lispan">Date: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no']; ?></span></li><br>
+                    <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no']; ?></span></li><br>
                     <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city']; ?></span></li><br>
                     <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row['Seat_no']; ?></span></li><br>
-                    
-                    
                 </ul>
             </div>
         </div>
+        <?php
+        if ($_SESSION['Fname2'] != "") {
+        ?>
+            <div class="bill2">
+                <div class="minibill">
+                    <ul><br>
+                        <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname2'] , $_SESSION['Lname2']; ?></span></li><br>
+                        <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid2']; ?></span></li><br>
+                        <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender2']; ?></span></li><br>
+                        <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no2']; ?></span></li><br>
+                        <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city2']; ?></span></li><br>
+                        <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row2['Seat_no']; ?></span></li><br>
+                    </ul>
+                </div>
+            </div>
+        <?php
+        }
+        if ($_SESSION['Fname3'] != "") {
+            ?>
+                <div class="bill2">
+                    <div class="minibill">
+                        <ul><br>
+                            <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname3'] , $_SESSION['Lname3']; ?></span></li><br>
+                            <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid3']; ?></span></li><br>
+                            <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender3']; ?></span></li><br>
+                            <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no3']; ?></span></li><br>
+                            <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city3']; ?></span></li><br>
+                            <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row3['Seat_no']; ?></span></li><br>
+                        </ul>
+                    </div>
+                </div>
+            <?php
+            }
+        ?>
     </div>
     <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
-        <?php
+    <?php
 
 
 
 
 
-        ?>
+    ?>
 </body>
 
 </html>

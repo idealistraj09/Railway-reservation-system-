@@ -131,11 +131,11 @@
                         <div class="input-item expiry">
                             <label for="expiry">Expiry Date</label>
                             <input type="text" class="month" id="expiry" placeholder="02" required>
-                            <input type="text" class="year" id="" placeholder="2017" required>
+                            <input type="text" class="year" id="" placeholder="2025" required>
                         </div>
-                        <div class="input-item csv">
-                            <label for="csv">CSV No.</label><a href="" required>?</a>
-                            <input type="text" class="csv">
+                        <div class="input-item cvv">
+                            <label for="cvv">CVV No.</label><a href="" required>?</a>
+                            <input type="triple" pattern="(?=.*[0-9])" class="cvv" maxlength="3" placeholder="&#9679;&#9679;&#9679;">
                         </div>
                     </div>
                     <div class="group submit-group">

@@ -310,11 +310,11 @@ body {
 .wrapper .container form .card-expiry .input-item.expiry input:last-of-type {
   margin-left: 30px;
 }
-.wrapper .container form .card-expiry .input-item.csv {
+.wrapper .container form .card-expiry .input-item.cvv {
   width: 80px;
   position: relative;
 }
-.wrapper .container form .card-expiry .input-item.csv a {
+.wrapper .container form .card-expiry .input-item.cvv a {
   display: block;
   position: absolute;
   top: 0;
@@ -323,7 +323,7 @@ body {
   text-decoration: none;
   color: #00b0ff;
 }
-.wrapper .container form .card-expiry .input-item.csv a:hover {
+.wrapper .container form .card-expiry .input-item.cvv a:hover {
   color: #263238;
 }
 .wrapper .container form .card-expiry .input-item label {
@@ -339,7 +339,7 @@ body {
 .wrapper .container form .card-expiry .input-item input.year {
   width: 79px;
 }
-.wrapper .container form .card-expiry .input-item input.csv {
+.wrapper .container form .card-expiry .input-item input.cvv {
   width: 79px;
 }
 .wrapper .container form .card-expiry .input-item input:focus {
@@ -491,4 +491,10 @@ body {
   background-color: transparent;
   border-color: #ffffff;
   margin-top: 10px;
+}
+
+input[type = triple]::-webkit-inner-spin-button,
+input[type = triple]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
 }

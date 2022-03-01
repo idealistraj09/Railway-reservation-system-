@@ -143,23 +143,10 @@
             }
         ?>
     </div>
-<<<<<<< HEAD
-    <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
-    <?php
-
-
-
-
-
-    ?>
-=======
     <div class="print">
         <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
     </div>
-        <?php
         
-        ?>
->>>>>>> dab639d524ac292db255f9b90602339b635d1414
 </body>
 
 </html>

@@ -152,7 +152,7 @@
                         <input type="tel"  placeholder="Phone Number" maxlength="10" name="no2" id="mobile2"    /><br>
                         <span>Date of Birth</span><br>
                         <input type="date" id="dateid2" name="date122" value="" min="1950-01-01"    />
-                        <input type="text" placeholder="City" name="city2" id="city2"   onkeydown="upperCaseF(this)"  />
+                        <input type="text" placeholder="City" name="city2" id="city2"   onkeydown="upperCaseF(this)"  /><br>
                         <button type="button" id="signUp1" name="hidepass1" onclick="hide2();">REMOVE</button>
                         <button type="button" id="add2" name="addpass1"  onclick="addsecond();">Add passenger</button>
                     </div>
@@ -176,7 +176,7 @@
                         <span>Date of Birth</span><br>
                         <input type='date' id='dateid3' name='date123' value=''  min='1950-01-01'    />
                         <input type='text' placeholder='City' name='city3' id="city3"   onkeydown='upperCaseF(this)'  />
-                        <button type='button' id='signUp' name='hidepass23'  onclick='hide3();'>REMOVE</button>
+                        <button type='button' id='signUp12' name='hidepass23'  onclick='hide3();'>REMOVE</button>
                         <button type='button' id='add3' name='addpass33'  onclick='addth();'>Add passenger</button>
                     </div>
                     

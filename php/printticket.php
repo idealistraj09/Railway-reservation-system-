@@ -83,6 +83,7 @@
         <div class="bill">
             <div class="minibill">
                 <ul><br>
+                <li><span text-align="center" >TICKET DETAILS:</span></li><br>
                     <li><span class="lispan">Train Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['clicket']; ?></span></li><br>
                     <li><span class="lispan">From: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['sstation']; ?></span></li><br>
                     <li><span class="lispan">To:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['dstation']; ?></span></li><br>
@@ -99,10 +100,11 @@
         <div class="bill2">
             <div class="minibill">
                 <ul><br>
+                <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
                     <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname'],$space, $_SESSION['Lname']; ?></span></li><br>
                     <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid']; ?></span></li><br>
-                    <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender']; ?></span></li><br>
-                    <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no']; ?></span></li><br>
+                    <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender']; ?></span></li><br>
+                    <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no']; ?></span></li><br>
                     <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city']; ?></span></li><br>
                     <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row['Seat_no']; ?></span></li><br>
                 </ul>
@@ -114,10 +116,11 @@
             <div class="bill2">
                 <div class="minibill">
                     <ul><br>
+                    <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
                         <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname2'] , $_SESSION['Lname2']; ?></span></li><br>
                         <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid2']; ?></span></li><br>
-                        <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender2']; ?></span></li><br>
-                        <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no2']; ?></span></li><br>
+                        <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender2']; ?></span></li><br>
+                        <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no2']; ?></span></li><br>
                         <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city2']; ?></span></li><br>
                         <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row2['Seat_no']; ?></span></li><br>
                     </ul>
@@ -130,10 +133,11 @@
                 <div class="bill2">
                     <div class="minibill">
                         <ul><br>
+                        <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
                             <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname3'] , $_SESSION['Lname3']; ?></span></li><br>
                             <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid3']; ?></span></li><br>
-                            <li><span class="lispan">gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender3']; ?></span></li><br>
-                            <li><span class="lispan">phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no3']; ?></span></li><br>
+                            <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender3']; ?></span></li><br>
+                            <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no3']; ?></span></li><br>
                             <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city3']; ?></span></li><br>
                             <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row3['Seat_no']; ?></span></li><br>
                         </ul>
@@ -144,7 +148,7 @@
         ?>
     </div>
     <div class="print">
-        <a href="javascript:void(0);" onclick="printPageArea('bill')">Print</a>
+        <a href="javascript:void(0);" onclick="printPageArea('bill')">Print Ticket</a>
     </div>
         
 </body>

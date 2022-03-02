@@ -35,12 +35,12 @@ form{
     margin: 20px;
     margin-top: 0%;
     padding: 20px;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .part1,.part2,.part3{
-   border: 2px solid black;
-   border-radius: 10px;
+   /* border: 2px solid black;
+   border-radius: 10px; */
    margin-left: 20px;
    padding: 10px;
    position: relative;
@@ -50,7 +50,7 @@ form{
 }
 .upper{
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     display: flex;
     flex-direction: row;

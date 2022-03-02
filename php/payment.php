@@ -135,7 +135,7 @@
                         </div>
                         <div class="input-item cvv">
                             <label for="cvv">CVV No.</label><a href="" required>?</a>
-                            <input type="triple" pattern="(?=.*[0-9])" class="cvv" maxlength="3" placeholder="&#9679;&#9679;&#9679;">
+                            <input type="triple" class="cvv" maxlength="3" placeholder="&#9679;&#9679;&#9679;">
                         </div>
                     </div>
                     <div class="group submit-group">

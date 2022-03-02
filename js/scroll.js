@@ -162,7 +162,7 @@ function hide3() {
   var add1 = document.getElementById("add1");
   var add2 = document.getElementById("add2");
   var add3 = document.getElementById("add3");
-  b1.style.display = "block";
+  b1.style.display = "inline";
   p3.style.display = "none";
   p1.style.left = "10%";
   p2.style.left = "10%";

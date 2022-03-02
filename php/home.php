@@ -7,6 +7,7 @@ session_start();
 include("../include/connection.php");
 if (isset($_SESSION['logged_as_user'])) {
   $msg = "Welcome " . $_SESSION['uname'];
+  
 } elseif (isset($_SESSION['logged_as_admin'])) {
   $msg = "Welcome " . $_SESSION['Admin_name'];
   $msg1 = "Admin Panel";
@@ -29,13 +30,28 @@ if (isset($_SESSION['logged_as_user'])) {
   <nav class="navbar">
     <div class="navbar2">
       <div class="navbar3">
-
-        <h1 class="logo">Railway Reservation System </h1><?php echo $msg1; ?>
+        <h1 class="logo">Railway Reservation System </h1>
+        
         <ul class="nav nav-right">
-          <li><span id="welcome"><?php echo $msg; ?></span></li>
-          <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">Sign In</a></li>
-          <li class="menu__group"><a href="../php/signup.php" class="menu__link r-link text-underlined">Sign  Up</a></li>
-          <li class="menu__group"><a href="../include/logout.php" class="menu__link r-link text-underlined">Log Out</a></li>
+          <?php 
+          if (isset($_SESSION['logged_as_user'])) {
+           echo "<li>
+            <div class='dropdown'>
+                <button class='dropbtn'>$msg</button>
+                <div class='dropdown-content'>
+                <a href='../php/myacc.php'>My Profile</a>
+                    <a href='../php/myacc.php'>My Booking</a>
+                </div>
+            </div>
+        </li>";
+          } 
+          else{
+            echo "<li class='menu__group'><a href='../php/signin.php' class='menu'>Sign In</a></li>";
+            echo "<li class='menu__group'><a href='../php/signup.php' class='menu'>Sign Up</a></li>";
+          } 
+          ?>
+          
+          <li class="menu__group"><a href="../include/logout.php" class="menu">Log Out</a></li>
           <li class="menu__group">
             <div class="datetime">
               <div class="date">
@@ -65,13 +81,16 @@ if (isset($_SESSION['logged_as_user'])) {
       <select name="source" id="c" required> <br>
         <option selected disabled value="">--Source Station--</option>
         <?php
-          $des_search = "select DISTINCT(Source_station_id) from tour;";
-          if($query_des = mysqli_query($con, $des_search)){}else{echo mysqli_error($con);};
+        $des_search = "select DISTINCT(Source_station_id) from tour;";
+        if ($query_des = mysqli_query($con, $des_search)) {
+        } else {
+          echo mysqli_error($con);
+        };
+        $des = mysqli_fetch_assoc($query_des);
+        while ($des) {
+          echo "<option>" . "$des[Source_station_id]" . "</option>";
           $des = mysqli_fetch_assoc($query_des);
-          while($des){
-            echo "<option>"."$des[Source_station_id]"."</option>";
-            $des = mysqli_fetch_assoc($query_des);
-          }
+        }
 
         ?>
       </select>
@@ -79,17 +98,20 @@ if (isset($_SESSION['logged_as_user'])) {
       <select name="destination" id="d" required>
         <option selected disabled value="">--Destination Station--</option>
         <?php
-          $des_search = "select DISTINCT(Destination_station_id) from tour;";
-          if($query_des = mysqli_query($con, $des_search)){}else{echo mysqli_error($con);};
+        $des_search = "select DISTINCT(Destination_station_id) from tour;";
+        if ($query_des = mysqli_query($con, $des_search)) {
+        } else {
+          echo mysqli_error($con);
+        };
+        $des = mysqli_fetch_assoc($query_des);
+        while ($des) {
+          echo "<option>" . "$des[Destination_station_id]" . "</option>";
           $des = mysqli_fetch_assoc($query_des);
-          while($des){
-            echo "<option>"."$des[Destination_station_id]"."</option>";
-            $des = mysqli_fetch_assoc($query_des);
-          }
+        }
 
         ?>
-        
-        
+
+
       </select><br>
       <input type="date" name="date" required>
       <br>
@@ -104,27 +126,25 @@ if (isset($_SESSION['logged_as_user'])) {
 if (isset($_POST['search'])) {
   if (isset($_SESSION['logged_as_user'])) {
 
-    if($_REQUEST['source']==$_REQUEST['destination']){
-      ?>  
-        <script>alert('SOURCE AND DESTINATION STATION IS SAME SELECT DIFFRENT TO CONTINUE')</script>
-      <?php
-    }else{
-    $_SESSION['sstation'] = mysqli_real_escape_string($con, @$_REQUEST['source']);
-    $_SESSION['dstation'] = mysqli_real_escape_string($con, @$_REQUEST['destination']);
-    $_SESSION['datebook'] = mysqli_real_escape_string($con, @$_REQUEST['date']);
-    header('Location: show.php');
-  }
-
-
-    
-  } else {
+    if ($_REQUEST['source'] == $_REQUEST['destination']) {
 ?>
+      <script>
+        alert('SOURCE AND DESTINATION STATION IS SAME SELECT DIFFRENT TO CONTINUE')
+      </script>
+    <?php
+    } else {
+      $_SESSION['sstation'] = mysqli_real_escape_string($con, @$_REQUEST['source']);
+      $_SESSION['dstation'] = mysqli_real_escape_string($con, @$_REQUEST['destination']);
+      $_SESSION['datebook'] = mysqli_real_escape_string($con, @$_REQUEST['date']);
+      header('Location: show.php');
+    }
+  } else {
+    ?>
     <script>
       alert('You need to Sign in First');
     </script>
 <?php
   }
-  
 }
 
 

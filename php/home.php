@@ -40,7 +40,7 @@ if (isset($_SESSION['logged_as_user'])) {
                 <button class='dropbtn'>$msg</button>
                 <div class='dropdown-content'>
                 <a href='../php/myacc.php'>My Profile</a>
-                    <a href='../php/myacc.php'>My Booking</a>
+                    <a href='../php/mybook.php'>My Booking</a>
                 </div>
             </div>
         </li>";

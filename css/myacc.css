@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 li {
   list-style: none;
@@ -127,14 +128,17 @@ img{
     transition: all 1s;
 }
 .photo{
-    height: 25%;
-    width: 43%;
+    height: 27%;
+    width: 44%;
     margin: 28%;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-weight: bolder;
+    background-color: #FF4B2B;
+    border: dashed 3px black;
+
 }
 .profile{
     display: flex;
@@ -151,7 +155,7 @@ img{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: aqua;
+    
     
     margin: 10px;
     
@@ -161,7 +165,7 @@ img{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: aqua;
+    
    
     margin: 10px;
     
@@ -169,11 +173,11 @@ img{
     margin-left: 30%;
     
   }
-  .profile span{
+ span{
       margin: 10px 20px;
       
   }
-  .profile span:nth-child(1){
+ span:nth-child(1){
       margin-top: 40px;
   }
   .profile2{
@@ -185,4 +189,31 @@ img{
     display: block;
     margin-top: 21%;
     position: absolute;
+  }
+  .profile2 .que{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 20px;
+    
+    height: 95%;
+    margin: 10px;
+    position: absolute;
+  }
+  .profile2 .ans{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 20px;
+    
+    height: 95%;
+    margin: 10px;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 4.5%;
+  }
+  .ans a{
+    width: 40%;
+    color: black;
+    font-weight: bold;
   }

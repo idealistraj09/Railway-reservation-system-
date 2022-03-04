@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
         $mail->Username = "proxycyberton09@gmail.com";
 
         //Set gmail password
-        $mail->Password = "Raj@2005";
+        $mail->Password = "RajPopat@2004";
         $mail->addEmbeddedImage('otp.jpg','otp');
         //Email subject
         $mail->Subject = "PASSWORD RESET OTP ";

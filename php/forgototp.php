@@ -4,10 +4,7 @@
 
 include("../include/connection.php");
 session_start();
-if(isset($_SESSION['forgatotp'])!=true)
-{
-    header('Location: home.php');
-}
+
 $otp = $_SESSION['otp'];
 if (isset($_POST['sendotp'])) {
 

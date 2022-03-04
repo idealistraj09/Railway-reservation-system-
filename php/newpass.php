@@ -4,10 +4,7 @@
 
 include("../include/connection.php");
 session_start();
-if(isset($_SESSION['newpass'])!=true)
-{
-    header('Location: home.php');
-}
+
 $pass = mysqli_real_escape_string($con, @$_REQUEST['pass']);
 $repass = mysqli_real_escape_string($con, @$_REQUEST['repass']);
 $otpmail = $_SESSION['otpmail'];

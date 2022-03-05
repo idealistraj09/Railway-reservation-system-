@@ -44,6 +44,7 @@ if (isset($_SESSION['logged_as_user'])) {
                 </div>
             </div>
         </li>";
+        echo "<li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>";
           } 
           else{
             echo "<li class='menu__group'><a href='../php/signin.php' class='menu'>Sign In</a></li>";
@@ -51,7 +52,7 @@ if (isset($_SESSION['logged_as_user'])) {
           } 
           ?>
           
-          <li class="menu__group"><a href="../include/logout.php" class="menu">Log Out</a></li>
+          
           <li class="menu__group">
             <div class="datetime">
               <div class="date">

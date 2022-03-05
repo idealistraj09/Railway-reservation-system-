@@ -10,12 +10,13 @@ li {
   font-size: 1.01rem;
 }
 li:hover{
-    color: #fff;
+    : #fff;
     cursor: pointer;
 }
 .menubar {
   margin-left: 38%;
   display: inline-block;
+  
 }
 button:hover{
     cursor: pointer;
@@ -24,12 +25,12 @@ button:hover{
   margin: 0;
   padding: 0;
 
-  background-color: aqua;
+  background-: aqua;
 }
 .dropbtn {
   padding: 16px;
   font-size: 16px;
-  background-color: transparent;
+  background-: transparent;
   border: none;
 }
 
@@ -42,21 +43,21 @@ button:hover{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  : black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
@@ -64,37 +65,42 @@ button:hover{
 }
 
 .dropdown:hover .dropbtn {
-  color: #fff;
+  : #fff;
 }
 .main{
-    background-color: #FF4B2B;
+    background-: #FF4B2B;
     margin: 10px;
     height: 600px;
     width: 1450px;
-    position: relative;;
+    position: relative;
+    border: 1px solid black;
   }
   .left{
       width: 25%;
       height: 97%;
-      background-color: bisque;
+      background-: bisque;
       border-radius: 20px;
       margin: 10px;
       display: block;
       position: absolute;
+      border: 1px solid black;
   }
   .right{
+    border: 1px solid black;
       width: 73%;
       height: 97%;
-      background-color: blue;
+      background-: blue;
       border-radius: 20px;
       margin: 10px;
       display: flex;
       float: right;
-      
+      overflow-y: scroll;
+      overflow-x: hidden;
   }
   .sub-main{
+    border: 1px solid black;
     border-radius: 20px;
-    background-color: aqua;
+    background-: aqua;
     height: 95%;
     margin: 10px;
     width: 95%;
@@ -113,7 +119,7 @@ img{
     align-items: center;
     text-align: center;
     justify-content: center ;
-    background-color: transparent;
+    background-: transparent;
     border: 0.1px dashed black;
     width: 75%;
     font-size: large;
@@ -122,7 +128,7 @@ img{
     margin: 5px 45px;
 }
 .submenu-btn:hover{
-    color: rgb(78, 64, 201);
+    : rgb(78, 64, 201);
     cursor: pointer;
     border: 1px solid black;
     transition: all 1s;
@@ -134,9 +140,10 @@ img{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
     text-align: center;
     font-weight: bolder;
-    background-color: #FF4B2B;
+    background-: #FF4B2B;
     border: dashed 3px black;
 
 }
@@ -144,10 +151,11 @@ img{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: aqua;
+    background-: aqua;
+    border: 1px solid black;
     height: 45%;
     margin: 10px;
-    width: 71.5%;
+    width: 70.5%;
     position: absolute;
     
   }
@@ -156,7 +164,7 @@ img{
     flex-direction: column;
     border-radius: 20px;
     
-    
+    border: 1px solid black;
     margin: 10px;
     
     position: relative;
@@ -165,29 +173,33 @@ img{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    
-   
-    margin: 10px;
-    
+    border: 1px solid black;
     position: absolute;
     margin-left: 30%;
+    padding-top: 22px;
+    float: left;
     
   }
- span{
-      margin: 10px 20px;
+ .ans span{
+  border: 1px solid black;
+      margin : 3.8%;
       
   }
- span:nth-child(1){
-      margin-top: 40px;
-  }
+ .que span{
+    margin : 0.8%;
+    
+}
+
   .profile2{
+    border: 1px solid black;
   border-radius: 20px;
-    background-color: rgb(131, 57, 214);
+    background-: rgb(131, 57, 214);
     height: 45%;
     margin: 10px;
     width: 71.5%;
     display: block;
     margin-top: 21%;
+    width: 70.5%;
     position: absolute;
   }
   .profile2 .que{
@@ -214,6 +226,26 @@ img{
   }
   .ans a{
     width: 40%;
-    color: black;
+    : black;
     font-weight: bold;
+  }
+  .show{
+    background-: #FF4B2B;
+    border-radius: 20px;
+    margin-left: 0%;
+    margin-right: 0%; 
+    margin-top: 1%;
+    margin-bottom : 1%;
+    height: 160px;
+    border: 1px solid black;
+    width: 95%;
+    padding: 2%;
+    display: inline-block;
+  }
+  .date{
+    margin-bottom: 50px;
+  }
+  .ul{
+    margin: 0;
+    padding: 0%;
   }

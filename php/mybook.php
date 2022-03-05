@@ -11,6 +11,7 @@
 
 <body>
     <?php
+    ini_set('session.gc_maxlifetime', 360000);
     session_start();
     include("../include/connection.php");
 
@@ -31,6 +32,7 @@
                     </li>
                     <div class="menubar">
                         <li><a href="../php/home.php">Home</a></li>
+                        <li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>
                         <li><a>Forgot Password</a></li>
                     </div>
                 </ul>
@@ -45,23 +47,23 @@
                     <span><?php echo $_SESSION['uname']; ?></span>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="submenu-btn">Profile</button>
-                    <button type="button" class="submenu-btn">Login Detail</button>
+                <h3 style="margin-left: 19%;">Total Ticket Booked: <?php echo $count; ?></h3>
                 </div>
             </div>
         </div>
         <div class="right">
-            <h3 style="margin-left: 5%;">Total Ticket Booked: <?php echo $count; ?></h3>
+            
             <div class="booked">
                 <ul class="ultrains">
+                    <h3>Ticket You Booked earlier....</h3>
                     <?php
                         $book = "select * from seat where user_id='$_SESSION[uname]'";
                         if($query = mysqli_query($con, $book)){}else{echo mysqli_error($con);}
                         $train_count = mysqli_num_rows($query);
                         $row1 = mysqli_fetch_assoc($query);
+
                     while($row1)
                     {
-                        echo "<li>";
                         $book2 = "select * from train where Train_id='$row1[Train_id]'";
                         if($query2 = mysqli_query($con, $book2)){}else{echo mysqli_error($con);}
                         $train_count = mysqli_num_rows($query2);
@@ -74,15 +76,16 @@
                         if($query4 = mysqli_query($con, $book4)){}else{echo mysqli_error($con);}
                         $train_count = mysqli_num_rows($query4);
                         $row4 = mysqli_fetch_assoc($query4);
-                        echo "<span> "." $row2[Arrival_time] "." </span>";
-                        echo "<span> "." $row2[Departure_time] "." </span>";
-                        echo "<span> "." $row3[train_type] "." </span>";
-                        echo "<span> "." $row2[Train_name] "." </span>";
-                        echo "<span> "." $row1[passsenger_id] "." </span>";
-                        echo "<span> "." $row4[Source_station_id] "." </span>";
-                        echo "<span> "." $row4[Destination_station_id] "." </span>";
-                        echo "<span> "." $row1[Seat_no] "." </span>";
-                        echo "<span> "." $row1[Date] "." </span>";
+                        echo "<li class='show'>";
+                        echo "<h3 style='margin-top:1%;'> "." $row2[Train_name] "." </h3>";
+                        echo " "." $row3[train_type] "." <br>";
+                        echo "<span style='margin-bottom:10px;'> Passsenger Name :"." $row1[passsenger_id] "." </span><br>";
+                        echo "<span style='float:left;'> From :"." $row4[Source_station_id] "." </span>";
+                        echo "<span style='float:right;'> To :"." $row4[Destination_station_id] "." </span><br>";
+                        echo "<span style='float:left;'> Arrival-Time :"." $row2[Arrival_time] "." </span><br>";
+                        echo "<span style='float:right;'> Departure-Time :"." $row2[Departure_time] "." </span><br>";
+                        echo "<span style='float:left;'> Date :"." $row1[Date] "." </span><br>";
+                        echo "<span  style='float:right;' class='date1'> SeatNo :"." $row1[Seat_no] "." </span><br>";
                         echo "</li>";
                         $row1 = mysqli_fetch_assoc($query);
                     }

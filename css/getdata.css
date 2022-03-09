@@ -28,8 +28,10 @@ form{
     margin: 0%;
     position: relative;
     display: flex;
-    background-color: rgb(42, 144, 190);
-    border-radius: 20px;
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
     width: 80%;
     height: 500px;
     margin: 20px;
@@ -74,9 +76,9 @@ label{
     padding-bottom: 0px;
     height: 50px;
 }
-.button1{
+/* .button1{
         
-}
+} */
 #signUp{
     width: 140px;
     height: 40px;

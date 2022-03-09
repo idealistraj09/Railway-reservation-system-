@@ -27,33 +27,51 @@ body {
     background-image: url(../img/train-backround.jpeg); 
     background-size: 1920px;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .logo{
-    display: flex;
+    /* display: flex;
     background-color: #FF4B2B;
     font-size: 40px;
     justify-content: center;
-    padding: 10px;
+    padding: 10px; */
+    display: flex;
+    background-color: #ff4b2b;
+    /* padding-left: 20px; */
+    /* margin-left: 0px;
+    margin-top: 20px; */
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
 }
 .menu__group{
     display: flex;
-    padding-left: 45%;
-    background-color: rgb(235, 232, 232);
+    padding-left: 80%;
+    font-size: 20px;
+    float: inline-end;
+    /* background-color: rgb(235, 232, 232); */
 }
 .bill,.bill2{
+    align-items: center;
     display: inline-block;
     position: relative;
-    background-color: #6cd5ff;
+    background-color: #ffffff;
     height: 400px;
     width: 40%;
     /* float: left; */
-    margin-top: 10px;
+    margin-top: 40px;
     margin-left: 100px;
     margin-right: 30px;
     z-index: 0;
-    border: #00b0ff solid 2px;
+    /* border: #00b0ff solid 2px; */
     border-radius: 20px;
     padding-bottom: 35px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
 }
 .minibill{
     display: inline-block;
@@ -61,7 +79,7 @@ body {
     text-align: left;
     height: 400px;
     width: 90%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     margin-top: 5%;
 }
 .lispan{
@@ -91,11 +109,28 @@ li{
 .print{
     margin-left: 45%;
     margin-top:4%;
-    background-color: #6cd5ff;
-    border:#00b0ff solid 2px;
+    background-color: #FF4B2B;
+    /* border:#00b0ff solid 2px; */
     height: 30px;
     width: 200px;
     border-radius: 10px;
     font-size: 25px;
     text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    color: aliceblue;
+}
+
+.passenger{
+    margin-top: 40px;
+    font-size: 25px;
+    color: white;
+    background-color: #FF4B2B;
+}
+
+.ticket{
+    margin-top: 40px;
+    font-size: 25px;
+    color: white;
+    background-color: #FF4B2B;
 }

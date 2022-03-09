@@ -80,10 +80,14 @@
 
     </nav>
     <div class="wrapper" id="hi">
+        <center>
+        <div class="ticket">
+                <h1>TICKET DETAILS</h1>
+            </div>
         <div class="bill">
             <div class="minibill">
                 <ul><br>
-                <li><span text-align="center" >TICKET DETAILS:</span></li><br>
+                <!-- <li><span text-align="center" >TICKET DETAILS:</span></li><br> -->
                     <li><span class="lispan">Train Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['clicket']; ?></span></li><br>
                     <li><span class="lispan">From: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['sstation']; ?></span></li><br>
                     <li><span class="lispan">To:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['dstation']; ?></span></li><br>
@@ -97,10 +101,15 @@
                 </ul>
             </div>
         </div>
+        </center>
+        <center>
+            <div class="passenger">
+                <h1>PASSENGER DETAILS</h1>
+            </div>
         <div class="bill2">
             <div class="minibill">
                 <ul><br>
-                <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
+                <!-- <li><span text-align="center" >PASSENGER DETAILS:</span></li><br> -->
                     <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname'],$space, $_SESSION['Lname']; ?></span></li><br>
                     <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid']; ?></span></li><br>
                     <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender']; ?></span></li><br>
@@ -110,9 +119,11 @@
                 </ul>
             </div>
         </div>
+        </center>
         <?php
         if ($_SESSION['Fname2'] != "") {
         ?>
+            <center>
             <div class="bill2">
                 <div class="minibill">
                     <ul><br>
@@ -126,10 +137,12 @@
                     </ul>
                 </div>
             </div>
-        <?php
+            </center>
+            <?php
         }
         if ($_SESSION['Fname3'] != "") {
             ?>
+            <center>
                 <div class="bill2">
                     <div class="minibill">
                         <ul><br>
@@ -143,6 +156,7 @@
                         </ul>
                     </div>
                 </div>
+            </center>
             <?php
             }
         ?>

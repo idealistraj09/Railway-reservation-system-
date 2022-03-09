@@ -73,7 +73,7 @@ footer,
 header,
 hgroup,
 menu,
-nav,
+/* nav, */
 output,
 ruby,
 section,
@@ -138,7 +138,7 @@ header,
 hgroup,
 main,
 menu,
-nav,
+/* nav, */
 section,
 summary {
   display: block;
@@ -174,6 +174,8 @@ body {
   width: 600px;
   height: 400px;
   background-color: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -420,14 +422,20 @@ body {
 .logo {
   display: flex;
   background-color: #ff4b2b;
-  font-size: 40px;
+  /* padding-left: 20px; */
+  margin-left: 20px;
+  margin-top: 20px;
+  align-items: center;
   justify-content: center;
-  padding: 10px;
+  font-size: 30px;
+  display: inline-block;
 }
 .menu__group {
   display: flex;
-  padding-left: 45%;
-  background-color: rgb(235, 232, 232);
+  margin-left: 80%;
+  float: inline-end;
+  font-size: 20px;
+  /* background-color: rgb(235, 232, 232); */
 }
 .bill {
   background-color: #ffffff;
@@ -437,8 +445,10 @@ body {
   margin-top: 70px;
   margin-left: 100px;
   z-index: 0;
-  border: #00b0ff solid 2px;
+  /* border: #ffffff solid 2px; */
   border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
 }
 .minibill {
   text-align: left;
@@ -498,3 +508,42 @@ input[type = triple]::-webkit-outer-spin-button{
   -webkit-appearance: none;
   margin: 0;
 }
+
+.navbar {
+  padding: 1px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #FF4B2B;
+  
+}
+/*
+.logo{
+  padding-left: 20px;
+  margin-left: 0;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  display: inline-block;
+  margin: 0;
+}
+.nav {
+  display: inline-block;
+  margin: 0;
+  
+}
+
+.navbar3{
+  padding-bottom: 10px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+/* if you want pull right nav links */
+/*.nav-right {
+  float: right;
+  line-height: 35px;
+  
+  
+} */

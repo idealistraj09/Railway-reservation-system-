@@ -45,7 +45,7 @@
             <div class="sub-main">
                 <div class="photo">
                     <img src="../img/avatar.jpg" height="147px" width="149px"><br>
-                    <span><?php echo $_SESSION['uname']; ?></span>
+                    <div class="pname"><span><?php echo $_SESSION['uname']; ?></span></div>
                 </div>
                 <div class="buttons">
                 <button type="button" class="submenu-btn">Profile</button>

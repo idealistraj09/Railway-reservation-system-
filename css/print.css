@@ -29,6 +29,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Roboto ', sans-serif;
 }
 .logo{
     /* display: flex;
@@ -52,7 +53,7 @@ body {
     display: flex;
     padding-left: 80%;
     font-size: 20px;
-    float: inline-end;
+    display: inline-block;
     /* background-color: rgb(235, 232, 232); */
 }
 .bill,.bill2{
@@ -96,7 +97,7 @@ body {
     justify-self: center;
 }
 .submit{
-    color: #00b0ff;
+    color: white;
 }
 li{
     list-style: none;
@@ -118,7 +119,8 @@ li{
     text-align: center;
     text-decoration: none;
     padding: 15px;
-    color: aliceblue;
+    color: black;
+    text-decoration: none;
 }
 
 .passenger{

@@ -127,7 +127,7 @@
             <div class="bill2">
                 <div class="minibill">
                     <ul><br>
-                    <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
+                    <!-- <li><span text-align="center" >PASSENGER DETAILS:</span></li><br> -->
                         <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname2'] , $_SESSION['Lname2']; ?></span></li><br>
                         <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid2']; ?></span></li><br>
                         <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender2']; ?></span></li><br>
@@ -146,7 +146,7 @@
                 <div class="bill2">
                     <div class="minibill">
                         <ul><br>
-                        <li><span text-align="center" >PASSENGER DETAILS:</span></li><br>
+                        <!-- <li><span text-align="center" >PASSENGER DETAILS:</span></li><br> -->
                             <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname3'] , $_SESSION['Lname3']; ?></span></li><br>
                             <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid3']; ?></span></li><br>
                             <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender3']; ?></span></li><br>

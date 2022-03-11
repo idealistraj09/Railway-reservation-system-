@@ -94,21 +94,30 @@
 
     </nav>
     <div class="wrapper">
+        <center>
+        <div class="train">
+            TRAIN DETAILS
+        </div>
         <div class="bill">
-            <div class="minibill">
-                <ul><br>
-                    <li><span class="lispan">Train Id: </span><span class="line">______________________________</span><span class="ans"><?php echo $_SESSION['clicket']; ?></span></li><br>
-                    <li><span class="lispan">From: </span><span class="line">______________________________</span><span class="ans"><?php echo $_SESSION['sstation']; ?></span></li><br>
-                    <li><span class="lispan">To:</span><span class="line">______________________________</span><span class="ans"><?php echo $_SESSION['dstation']; ?></span></li><br>
-                    <li><span class="lispan">Date: </span><span class="line">______________________________</span><span class="ans"><?php echo $_SESSION['datebook']; ?></span></li><br>
-                    <li><span class="lispan">Train type:</span><span class="line"> ______________________________</span><span class="ans"><?php echo $_SESSION['tcategory']; ?></span></li><br>
-                    <li><span class="lispan">Seat Type:</span><span class="line"> ______________________________</span><span class="ans"><?php echo $_SESSION['scategory']; ?></span></li><br>
-                    <li><span class="lispan">One Passenger Fare:</span><span class="line"> ______________________________</span><span class="ans"><?php echo $_SESSION['fare'] . "₹"; ?></span></li><br>
-                    <li><span class="lispan">Total Passenger:</span><span class="line"> ______________________________</span><span class="ans"><?php echo $_SESSION['Tpassenger']; ?></span></li><br>
-                    <li><span class="lispan">Total Fare:</span><span class="line"> ______________________________</span><span class="ans"><?php echo $_SESSION['totalfare'] . "₹"; ?></span></li><br>
+                <div class="minibill">
+                    <ul><br>
+                    <li><span class="lispan">Train Id: </span><span class="line">                         </span><span class="ans"><?php echo $_SESSION['clicket']; ?></span></li><br>
+                    <li><span class="lispan">From: </span><span class="line">                         </span><span class="ans"><?php echo $_SESSION['sstation']; ?></span></li><br>
+                    <li><span class="lispan">To:</span><span class="line">                         </span><span class="ans"><?php echo $_SESSION['dstation']; ?></span></li><br>
+                    <li><span class="lispan">Date: </span><span class="line">                         </span><span class="ans"><?php echo $_SESSION['datebook']; ?></span></li><br>
+                    <li><span class="lispan">Train type:</span><span class="line">                          </span><span class="ans"><?php echo $_SESSION['tcategory']; ?></span></li><br>
+                    <li><span class="lispan">Seat Type:</span><span class="line">                          </span><span class="ans"><?php echo $_SESSION['scategory']; ?></span></li><br>
+                    <li><span class="lispan">One Passenger Fare:</span><span class="line">                          </span><span class="ans"><?php echo $_SESSION['fare'] . "₹"; ?></span></li><br>
+                    <li><span class="lispan">Total Passenger:</span><span class="line">                          </span><span class="ans"><?php echo $_SESSION['Tpassenger']; ?></span></li><br>
+                    <li><span class="lispan">Total Fare:</span><span class="line">                          </span><span class="ans"><?php echo $_SESSION['totalfare'] . "₹"; ?></span></li><br>
                     
                 </ul>
             </div>
+        </div>
+    </center>
+    <center>
+        <div class="entercard">
+            ENTER CARD DETAILS
         </div>
         <div class="container">
             <article class="part card-details">
@@ -146,8 +155,9 @@
             </article>
             <div class="part bg"></div>
         </div>
+    </center>
     </div>
-
+    
 
     <?php
 

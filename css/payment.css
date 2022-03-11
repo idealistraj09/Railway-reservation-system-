@@ -159,6 +159,8 @@ body {
   background-image: url(../img/train-backround.jpeg);
   background-size: 1920px;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -168,9 +170,9 @@ body {
   margin: 80px auto 0;
 }
 .wrapper .container {
-  margin-top: 70px;
-  margin-right: 60px;
-  float: right;
+  margin-top: 40px;
+  /* margin-right: 60px; */
+  /* float: right; */
   width: 600px;
   height: 400px;
   background-color: #fff;
@@ -437,13 +439,15 @@ body {
   font-size: 20px;
   /* background-color: rgb(235, 232, 232); */
 }
+
 .bill {
   background-color: #ffffff;
   height: 450px;
   width: 40%;
-  float: left;
-  margin-top: 70px;
-  margin-left: 100px;
+  /* float: left; */
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
   z-index: 0;
   /* border: #ffffff solid 2px; */
   border-radius: 20px;
@@ -517,6 +521,11 @@ input[type = triple]::-webkit-outer-spin-button{
   background-color: #FF4B2B;
   
 }
+
+.container{
+  display: flex;
+  align-items: center;
+}
 /*
 .logo{
   padding-left: 20px;
@@ -547,3 +556,21 @@ input[type = triple]::-webkit-outer-spin-button{
   
   
 } */
+
+.train{
+  margin-top: 40px;
+  font-size: 25px;
+  color: white;
+  background-color: #FF4B2B;
+}
+
+.entercard{
+  margin-top: 40px;
+  font-size: 25px;
+  color: white;
+  background-color: #FF4B2B;
+}
+
+.container{
+  margin: 50px;
+}

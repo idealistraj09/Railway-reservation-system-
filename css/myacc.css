@@ -2,19 +2,27 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: 'Roboto ', sans-serif;
 }
 li {
   list-style: none;
   display: inline-block;
   margin-left: 20px;
-  font-size: 1.01rem;
+  font-size: 20px;
+  text-decoration: none;
 }
-li:hover{
-    color: #fff;
-    cursor: pointer;
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
+a:hover{
+  color: white;
+}
+
 .menubar {
-  margin-left: 38%;
+  margin-left: 40%;
   display: inline-block;
   
 }
@@ -24,8 +32,7 @@ button:hover{
 .nav {
   margin: 0;
   padding: 0;
-
-  background-color: aqua;
+  background-color: #FF4B2B;
 }
 .dropbtn {
   padding: 16px;
@@ -50,14 +57,15 @@ button:hover{
 }
 
 .dropdown-content a {
-  color: black;
+  background-color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: large;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -68,28 +76,29 @@ button:hover{
   color: #fff;
 }
 .main{
-    background-color: #FF4B2B;
+    /* background-color: #FF4B2B; */
     margin: 10px;
     height: 600px;
     width: 1450px;
     position: relative;
-    border: 1px solid black;
+    border-radius: 15px;
+    /* border: 1px solid black; */
   }
   .left{
       width: 25%;
       height: 97%;
-      background-color: bisque;
+      /* background-color: white; */
       border-radius: 20px;
       margin: 10px;
       display: block;
       position: absolute;
-      border: 1px solid black;
+      /* border: 1px solid black; */
   }
   .right{
-    border: 1px solid black;
+    /* border: 1px solid black; */
       width: 73%;
       height: 97%;
-      background-color: blue;
+      /* background-color: white; */
       border-radius: 20px;
       margin: 10px;
       display: flex;
@@ -98,7 +107,7 @@ button:hover{
       overflow-x: hidden;
   }
   .sub-main{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 20px;
     background-color: aqua;
     height: 95%;
@@ -128,7 +137,7 @@ img{
     margin: 5px 45px;
 }
 .submenu-btn:hover{
-    color: rgb(78, 64, 201);
+    background-color: rgb(78, 64, 201);
     cursor: pointer;
     border: 1px solid black;
     transition: all 1s;
@@ -140,19 +149,19 @@ img{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
     font-weight: bolder;
-    background-color: #FF4B2B;
-    border: dashed 3px black;
-
+    /* background-color: #FF4B2B; */
+    border: solid 5px black;
+  
 }
 .profile{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     background-color: aqua;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 45%;
     margin: 10px;
     width: 70.5%;
@@ -162,26 +171,24 @@ img{
   .que{
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    
-    border: 1px solid black;
-    margin: 10px;
-    
+    /* border-radius: 20px; */
+    /* border: 1px solid black; */
+    margin-left: 50px;
     position: relative;
   }
   .ans{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: absolute;
-    margin-left: 30%;
+    margin-left: 250px;
     padding-top: 22px;
     float: left;
     
   }
  .ans span{
-  border: 1px solid black;
+  /* border: 1px solid black; */
       margin : 3.8%;
       
   }
@@ -191,9 +198,9 @@ img{
 }
 
   .profile2{
-    border: 1px solid black;
+    /* border: 1px solid black; */
   border-radius: 20px;
-    background-color: rgb(131, 57, 214);
+    background-color: aqua;
     height: 45%;
     margin: 10px;
     width: 71.5%;
@@ -207,9 +214,8 @@ img{
     flex-direction: column;
     width: 40%;
     border-radius: 20px;
-    
+    margin-left: 50px;
     height: 95%;
-    margin: 10px;
     position: absolute;
   }
   .profile2 .ans{
@@ -221,13 +227,17 @@ img{
     height: 95%;
     margin: 10px;
     position: absolute;
-    margin-left: 30%;
+    margin-left: 250px;
     margin-top: 4.5%;
+
   }
   .ans a{
     width: 40%;
-    color: black;
+    /* background-color: black; */
     font-weight: bold;
+    color: black;
+    list-style: none;
+    margin-top: 30px;
   }
   .show{
     background-color: #FF4B2B;
@@ -237,7 +247,7 @@ img{
     margin-top: 1%;
     margin-bottom : 1%;
     height: 160px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 95%;
     padding: 2%;
     display: inline-block;
@@ -249,3 +259,8 @@ img{
     margin: 0;
     padding: 0%;
   }
+
+.pname{
+  margin-top: 30px;
+  font-size: 30px;
+}

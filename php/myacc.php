@@ -47,21 +47,24 @@
                     <img src="../img/avatar.jpg" height="147px" width="149px"><br>
                     <div class="pname"><span><?php echo $_SESSION['uname']; ?></span></div>
                 </div>
-                <div class="buttons">
+                <!-- <div class="buttons">
                 <button type="button" class="submenu-btn">Profile</button>
                     <button type="button" class="submenu-btn">Login Detail</button>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="right">
             <div class="profile">
                 <div class="que">
-                    <h2 style="margin-left: 100px;">Personal Details</h2>
+                    <h2 style="margin-left: 50px;">Personal Details</h2>
                     <span>Full Name : </span>
                     <span>Birth-date :</span>
                     <span>Gender :</span>
                     <span>City :</span>
                     <span>Address :</span>
+                    <span>Email : </span>
+                    <span>Moile-no :</span>
+                    <span>Password :</span>
                 </div>
                 <div class="ans" style="margin-top: 45px;">
                     <span><?php echo $row['First_Name']; ?> </span>
@@ -69,9 +72,12 @@
                     <span><?php echo $row['Gender']; ?></span>
                     <span><?php echo $row['City']; ?></span>
                     <span><?php echo $row['Local_address']; ?></span>
+                    <span><?php echo $row['Email']; ?> </span>
+                    <span><?php echo $row['Mobile_No']; ?></span>
+                    <div id="change"><a href="../php/forgot.php">Change Password</button></a></div>
                 </div>
             </div>
-            <div class="profile2">
+            <!-- <div class="profile2">
                 <div class="que">
                     <h2 style="margin-left: 100px;">Personal Details</h2>
                     <span>Email : </span>
@@ -85,7 +91,7 @@
                     <a href="../php/forgot.php">Change Password</button></a>
                     
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

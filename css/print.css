@@ -1,44 +1,112 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Work+Sans);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-weight: bold;
-  font-size: 100%;
-  vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-weight: bold;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
 body {
     /* background-color: #b3e5fc; */
-    background-image: url(../img/train-backround.jpeg); 
+    background-image: url(../img/train-backround.jpeg);
     background-size: 1920px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto ', sans-serif;
 }
-.logo{
+
+.logo {
     /* display: flex;
     background-color: #FF4B2B;
     font-size: 40px;
     justify-content: center;
     padding: 10px; */
     display: flex;
-    background-color: #ff4b2b;
     /* padding-left: 20px; */
     /* margin-left: 0px;
     margin-top: 20px; */
@@ -49,14 +117,29 @@ body {
     display: inline-block;
     width: 100%;
 }
-.menu__group{
+
+.nav-right {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    background-color: #ff4b2b;
+}
+
+.navbar2 {
+    width: 100%;
+}
+
+.menu__group {
+    /* display: flex;
     padding-left: 80%;
     font-size: 20px;
-    display: inline-block;
+    display: inline-block; */
     /* background-color: rgb(235, 232, 232); */
+    padding: 1rem;
 }
-.bill,.bill2{
+
+.bill,
+.bill2 {
     align-items: center;
     display: inline-block;
     position: relative;
@@ -71,45 +154,51 @@ body {
     /* border: #00b0ff solid 2px; */
     border-radius: 20px;
     padding-bottom: 35px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.minibill{
+
+.minibill {
     display: inline-block;
     position: relative;
     text-align: left;
-    height: 400px;
+    height: 300px;
     width: 90%;
     /* margin-left: 5%; */
     margin-top: 5%;
 }
-.lispan{
+
+.lispan {
     padding: 20px;
     padding-top: 20px;
 }
-.ans{
+
+.ans {
     float: right;
 }
-.line{
+
+.line {
     text-align: center;
     justify-content: center;
     justify-items: center;
     justify-self: center;
 }
-.submit{
+
+.submit {
     color: white;
 }
-li{
+
+li {
     list-style: none;
 }
-.bill2{
+
+.bill2 {
     height: 250px;
     width: 500px;
 }
 
-.print{
+.print {
     margin-left: 45%;
-    margin-top:4%;
+    margin-top: 4%;
     background-color: #FF4B2B;
     /* border:#00b0ff solid 2px; */
     height: 30px;
@@ -123,14 +212,14 @@ li{
     text-decoration: none;
 }
 
-.passenger{
+.passenger {
     margin-top: 40px;
     font-size: 25px;
     color: white;
     background-color: #FF4B2B;
 }
 
-.ticket{
+.ticket {
     margin-top: 40px;
     font-size: 25px;
     color: white;

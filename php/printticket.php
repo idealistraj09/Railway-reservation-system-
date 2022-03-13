@@ -56,8 +56,8 @@
                     <li>
                         <h1 class="logo" id="logo">Railway Reservation System </h1>
                     </li>
-                    <li><a href="../php/home.php">Home</a></li>
                     <li class="menu__group">
+                    <a href="../php/home.php">Home</a>
                         <div class="datetime">
                             <div class="date">
                                 <span id="dayname">Day</span>,

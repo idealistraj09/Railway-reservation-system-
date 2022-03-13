@@ -55,7 +55,7 @@
             }
         }
         // $insert_pass_count = mysqli_num_rows($query);
-        header('Location: printticket.php');
+        header('Location: success.php');
 
     }
 

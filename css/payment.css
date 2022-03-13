@@ -655,3 +655,13 @@ input[type=triple]::-webkit-outer-spin-button {
 .container {
     margin: 50px;
 }
+
+.home{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.home:hover{
+    color: white;
+}

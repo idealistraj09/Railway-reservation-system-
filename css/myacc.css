@@ -191,11 +191,11 @@ img{
   }
  .ans span{
   /* border: 1px solid black; */
-      margin : 3.8%;
+      margin : 10px;
       
   }
  .que span{
-    margin : 0.8%;
+    margin : 10px;
     
 }
 
@@ -242,7 +242,7 @@ img{
     margin-top: 30px;
   }
   .show{
-    background-color: #FF4B2B;
+    background-color: rgb(231, 231, 231);
     border-radius: 20px;
     margin-left: 0%;
     margin-right: 0%; 

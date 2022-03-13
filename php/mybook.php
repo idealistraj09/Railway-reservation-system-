@@ -33,7 +33,7 @@
                     <div class="menubar">
                         <li><a href="../php/home.php">Home</a></li>
                         <li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>
-                        <li><a>Forgot Password</a></li>
+                        <li><a href="../php/forgot.php">Forgot Password</a></li>
                     </div>
                 </ul>
             </div>

@@ -208,8 +208,8 @@ li {
     text-align: center;
     text-decoration: none;
     padding: 15px;
-    color: black;
     text-decoration: none;
+    margin-bottom: 40px;
 }
 
 .passenger {
@@ -224,4 +224,13 @@ li {
     font-size: 25px;
     color: white;
     background-color: #FF4B2B;
+}
+
+.home{
+    text-decoration: none;
+    font-size: 20;
+    color: black;
+}
+.home:hover{
+    color: white;
 }

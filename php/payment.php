@@ -72,7 +72,7 @@
                     </li>
 
                     <li class="menu__group">
-                        <a href="../php/home.php">Home</a>
+                        <a href="../php/home.php" class="home">Home</a>
                         <div class="datetime">
                             <div class="date">
                                 <span id="dayname">Day</span>,

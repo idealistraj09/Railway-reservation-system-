@@ -70,9 +70,9 @@
                     <li>
                         <h1 class="logo" id="logo">Railway Reservation System </h1>
                     </li>
-
+                    <li style="margin-top: 30px; margin-left: 700px; font-weight:bold;"><a href="../php/home.php" class="home">Home</a></li>
                     <li class="menu__group">
-                        <a href="../php/home.php" class="home">Home</a>
+                        
                         <div class="datetime">
                             <div class="date">
                                 <span id="dayname">Day</span>,

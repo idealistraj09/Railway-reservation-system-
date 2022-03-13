@@ -10,18 +10,20 @@
 
  <body>
      <style>
-         .center{
-            transform: 0.2s scale(20);
-         }
+        
      </style>
     <div class="center" style="text-align: center; align-items: center; justify-self: center;">
-        <img src="../img/loading1.gif" alt="">
-        <h1>Ticket Booked !!!</h1>
+        <img src="../img/loading.gif" alt="">
+        <h1  id="book">Ticket Booked !!! </h1>
     </div>
      <script>
+         
          window.setTimeout(function() {
              window.location.href = "printticket.php";
-         }, 2000);
+             
+         }, 1500);
+         
+         
      </script>
 
  </body>

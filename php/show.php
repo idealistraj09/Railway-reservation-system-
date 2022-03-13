@@ -77,6 +77,9 @@
             
             $query = mysqli_query($con, $train_search);
             $train_count = mysqli_num_rows($query);
+            if($train_count==0){
+               echo "<h1>No Train Found</he>";
+            }
             $row1 = mysqli_fetch_assoc($query);
             $train1_search = "SELECT Train_id FROM `train` WHERE Tour_id=(select Tour_id from `tour` where Source_station_id='$sstation' and Destination_station_id='$dstation');";
             $query1 = mysqli_query($con, $train1_search);

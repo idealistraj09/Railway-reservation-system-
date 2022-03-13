@@ -108,7 +108,7 @@ if (isset($_POST['click'])) {
             //Attachment
 
             //Email body
-            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR RESET PASSWORD IS  '.$otp.'</p>'
+            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR verify E-mail IS  '.$otp.'</p>'
 								.'<img src="cid:otp">';
 
             //Add recipient

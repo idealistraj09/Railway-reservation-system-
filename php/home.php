@@ -7,7 +7,6 @@ session_start();
 include("../include/connection.php");
 if (isset($_SESSION['logged_as_user'])) {
   $msg = "Welcome " . $_SESSION['uname'];
-  
 } elseif (isset($_SESSION['logged_as_admin'])) {
   $msg = "Welcome " . $_SESSION['Admin_name'];
   $msg1 = "Admin Panel";
@@ -31,11 +30,11 @@ if (isset($_SESSION['logged_as_user'])) {
     <div class="navbar2">
       <div class="navbar3">
         <h1 class="logo">Railway Reservation System </h1>
-        
+
         <ul class="nav nav-right">
-          <?php 
+          <?php
           if (isset($_SESSION['logged_as_user'])) {
-           echo "<li>
+            echo "<li>
             <div class='dropdown'>
                 <button class='dropbtn'>$msg</button>
                 <div class='dropdown-content'>
@@ -44,15 +43,14 @@ if (isset($_SESSION['logged_as_user'])) {
                 </div>
             </div>
         </li>";
-        echo "<li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>";
-          } 
-          else{
+            echo "<li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>";
+          } else {
             echo "<li class='menu__group'><a href='../php/signin.php' class='menu'>Sign In</a></li>";
             echo "<li class='menu__group'><a href='../php/signup.php' class='menu'>Sign Up</a></li>";
-          } 
+          }
           ?>
-          
-          
+
+
           <li class="menu__group">
             <div class="datetime">
               <div class="date">
@@ -114,13 +112,29 @@ if (isset($_SESSION['logged_as_user'])) {
 
 
       </select><br>
-      <input type="date" name="date" required>
+      <input type="date" name="date" id="datefield" required>
       <br>
       <input type="submit" name="search" value="Search">
     </form>
   </div>
   <!--/.container-->
+  <script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
 
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("datefield").setAttribute("min", today);
+  </script>
 </body>
 <?php
 

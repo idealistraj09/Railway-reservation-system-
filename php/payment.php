@@ -47,9 +47,9 @@
         }
         if ($_SESSION['Fname3'] != "") {
             $_SESSION['Tpassenger'] = 3;
-            $insert_pass3 = "INSERT INTO `passenger`(`passenger_id`,`First_Name`, `Last_Name`, `Email`, `Gender`, `Mobile_No`, `Date_of_birth`, `City`) VALUES (NULL,'$_SESSION[Fname3]','$_SESSION[Fname3]','$_SESSION[mailid3]','$_SESSION[gender3]','$_SESSION[no3]','$_SESSION[bdate3]','$_SESSION[city3]');";
+            $insert_pass3 = "INSERT INTO `passenger`(`passenger_id`,`First_Name`, `Last_Name`, `Email`, `Gender`, `Mobile_No`, `Date_of_birth`, `City`) VALUES (NULL,'$_SESSION[Fname3]','$_SESSION[Lname3]','$_SESSION[mailid3]','$_SESSION[gender3]','$_SESSION[no3]','$_SESSION[bdate3]','$_SESSION[city3]');";
             $query3 = mysqli_query($con, $insert_pass3);
-            $insert_seat3 = "INSERT INTO `seat`(`Seat_id`, `Seat_no`, `Date`, `Seat_availability`, `passsenger_id`, `Seat_cat_id`, `Train_id`,`user_id`) VALUES (NULL,2,'$_SESSION[clicked]','C','$_SESSION[Fname3]$_SESSION[Fname3]','$_SESSION[clickes]','$_SESSION[clicket]','$_SESSION[uname]')";
+            $insert_seat3 = "INSERT INTO `seat`(`Seat_id`, `Seat_no`, `Date`, `Seat_availability`, `passsenger_id`, `Seat_cat_id`, `Train_id`,`user_id`) VALUES (NULL,2,'$_SESSION[clicked]','C','$_SESSION[Fname3]$_SESSION[Lname3]','$_SESSION[clickes]','$_SESSION[clicket]','$_SESSION[uname]')";
             if ($query6 = mysqli_query($con, $insert_seat3)) {
             } else {
                 echo "ERROR: Could not able to execute $insert_seat. " . mysqli_error($con);

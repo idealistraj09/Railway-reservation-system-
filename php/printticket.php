@@ -46,7 +46,12 @@
         $row3 = mysqli_fetch_array($query4);
     }
 
-
+    if(isset($row3['Seat_no'])){
+        echo "yes";
+    }
+    else{
+        echo "no";
+    }
     ?>
 
     <nav class="navbar">

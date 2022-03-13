@@ -46,12 +46,6 @@
         $row3 = mysqli_fetch_array($query4);
     }
 
-    if(isset($row3['Seat_no'])){
-        echo "yes";
-    }
-    else{
-        echo "no";
-    }
     ?>
 
     <nav class="navbar">
@@ -62,6 +56,7 @@
                     <li>
                         <h1 class="logo" id="logo">Railway Reservation System </h1>
                     </li>
+                    <li><a href="../php/home.php">Home</a></li>
                     <li class="menu__group">
                         <div class="datetime">
                             <div class="date">

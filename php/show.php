@@ -34,7 +34,7 @@
             <span style="margin-left: 10px; font-size: 18px;">Trains</span>
             <ul class="nav nav-right">
                <li><span id="welcome"></span></li>
-               <li class="menu__group"><a href="../php/signin.php" class="menu__link r-link text-underlined">SignIn</a></li>
+               <li><a href="../php/home.php">Home</a></li>
                <li class="menu__group">
                   <div class="datetime">
                      <div class="date">

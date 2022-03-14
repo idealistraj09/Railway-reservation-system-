@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Booking</title>
     <link rel="stylesheet" href="../css/myacc.css">
+    <link rel="stylesheet" href="../css/allinone.css">
 </head>
 
 <body>
@@ -55,13 +56,18 @@
             
             <div class="booked">
                 <ul class="ultrains">
-                    <h3>Ticket You Booked earlier....</h3>
+                    
                     <?php
                         $book = "select * from seat where user_id='$_SESSION[uname]'";
                         if($query = mysqli_query($con, $book)){}else{echo mysqli_error($con);}
                         $train_count = mysqli_num_rows($query);
                         $row1 = mysqli_fetch_assoc($query);
-
+                        if($train_count > 0){
+                            echo "<h3>Ticket You Booked earlier....</h3>";
+                        }
+                        else{
+                            echo "<h3>No Ticket Booked yet </h3>";
+                        }
                     while($row1)
                     {
                         $book2 = "select * from train where Train_id='$row1[Train_id]'";

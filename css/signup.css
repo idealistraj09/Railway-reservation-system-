@@ -87,7 +87,6 @@ form {
 	padding: 10px 50px;
 	height: 85%;
 	text-align: center;
-	width: 200%;
 }
 
 textarea{
@@ -121,7 +120,7 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 430px;
+	width: 830px;
 	max-width: 100%;
 	min-height: 520px;
 	display: inline-flex;
@@ -198,7 +197,7 @@ input {
 .overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #f5f3f3, #e6c5cc);
+	background: linear-gradient(to top, #FF4B2B, #f02906);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -332,7 +331,6 @@ img.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 	margin-top: 10px;
-	position: absolute;
 }
 #resend{
     background-color: rgb(179, 56, 56);

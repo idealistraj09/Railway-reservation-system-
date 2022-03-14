@@ -1,0 +1,4 @@
+INSERT INTO `train` (`Train_id`, `Train_name`, `Date`, `Arrival_time`, `Departure_time`, `Tour_id`, `Train_cat_id`) VALUES ('T10', 'GUJRAT MAIL', '2022-03-25', '18:23:53', '22:54:53', 'TR02', 'TC2');
+INSERT INTO `train` (`Train_id`, `Train_name`, `Date`, `Arrival_time`, `Departure_time`, `Tour_id`, `Train_cat_id`) VALUES ('T11', 'RAJDHANI EXPRESS', '2022-03-25', '18:23:53', '22:54:53', 'TR02', 'TC1');
+INSERT INTO `train` (`Train_id`, `Train_name`, `Date`, `Arrival_time`, `Departure_time`, `Tour_id`, `Train_cat_id`) VALUES ('T13', 'OKHA EXPRESS', '2022-03-25', '18:23:53', '22:54:53', 'TR02', 'TC2');
+

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/myacc.css">
+    <link rel="stylesheet" href="../css/allinone.css">
     <script src="time.js"></script>
     <title>My Account</title>
 </head>
@@ -56,7 +57,7 @@
         <div class="right">
             <div class="profile">
                 <div class="que">
-                    <h2 style="margin-left: 50px;">Personal Details</h2>
+                    <h2 id="pers">Personal Details</h2>
                     <span>Full Name : </span>
                     <span>Birth-date :</span>
                     <span>Gender :</span>

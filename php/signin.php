@@ -81,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
     <link rel="stylesheet" href="../css/allinone.css">
     <title>sign in</title>
 </head>
+
 <body>
     <h2>Join us</h2>
     <div class="container" id="container">
@@ -95,27 +96,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
                 <a href="../php/home.php"><img src="../img/homebt.png" height="40px" width="40px"></a>Home
             </form>
         </div>
-        <div>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <form action="signup.php">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 <?php
-    
+
 ?>
+
 </html>

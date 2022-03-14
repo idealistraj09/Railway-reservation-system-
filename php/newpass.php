@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
     <div class="container" id="container">
         <div class="form-container sign-in-container">
             <form action="#" method="POST">
-                <h1>New Password</h1>
+                <h1 style="margin-top: 20%;">New Password</h1>
                 <br><br>
                 <input type="password" placeholder="Password" name="pass" minlength="8" required />
                 <input type="password" placeholder="Re-Enter Password" name="repass" minlength="8" required />

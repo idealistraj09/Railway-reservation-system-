@@ -13,3 +13,6 @@
   body{
       animation:  bodyt 0.75s;
   }
+  input[type=button]{
+    cursor: pointer;
+  }

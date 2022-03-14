@@ -78,10 +78,11 @@
             $query = mysqli_query($con, $train_search);
             $train_count = mysqli_num_rows($query);
             if($train_count==0){
-               echo "<h1>No Train Found</he>";
+               echo "<h1>No Train Found</he >";
             }
             $row1 = mysqli_fetch_assoc($query);
             $train1_search = "SELECT Train_id FROM `train` WHERE Tour_id=(select Tour_id from `tour` where Source_station_id='$sstation' and Destination_station_id='$dstation');";
+            
             $query1 = mysqli_query($con, $train1_search);
             $traind_search = "SELECT `Date` FROM `train` WHERE Tour_id=(select Tour_id from `tour` where Source_station_id='$sstation' and Destination_station_id='$dstation');";
             $queryd = mysqli_query($con, $traind_search);
@@ -90,6 +91,9 @@
             
             $i = -1;
             $j = 10;
+            if($train_count){
+               echo "<h3'>Total "."$train_count"." Train Avaiable</h3>";
+            }
             while ($row1) {
                
                $i = $i + 1;
@@ -114,11 +118,11 @@
                $nseat_search = "SELECT * FROM `seat` WHERE Train_id='$row1[Train_id]' and Seat_cat_id='SC2' and Seat_availability='C' ;";
                $query_nseat = mysqli_query($con, $nseat_search);
                $nseat_count = mysqli_num_rows($query_nseat);
-               $fareAC_search = "SELECT * FROM `fare` WHERE Tour_id='$row1[Tour_id]' and Train_cat_id='$row1[Train_cat_id]' AND Seat_cat_id='SC1';";
+               $fareAC_search = "SELECT * FROM `fare` WHERE Tour_id='$row1[Tour_id]' and  Seat_cat_id='SC1';";
                if($query_fareAC = mysqli_query($con, $fareAC_search)){}else{echo mysqli_error($con);};
                // $fare_count = mysqli_num_rows($query_fare);
                $fareA = mysqli_fetch_assoc($query_fareAC);
-               $fareNAC_search = "SELECT * FROM `fare` WHERE Tour_id='$row1[Tour_id]' and Train_cat_id='$row1[Train_cat_id]' AND Seat_cat_id='SC2';";
+               $fareNAC_search = "SELECT * FROM `fare` WHERE Tour_id='$row1[Tour_id]' and  Seat_cat_id='SC2';";
                if($query_fareNAC = mysqli_query($con, $fareNAC_search)){}else{echo mysqli_error($con);};
                // $fare_count = mysqli_num_rows($query_fare);
                $fareN = mysqli_fetch_assoc($query_fareNAC);
@@ -137,8 +141,11 @@
                   }
                   else if($aseat_count <= 19 ){
                      $aseat_ava = 20 - $aseat_count;
-                     
-                        $acfare=$fareA['Fare'];
+                     $acfare=$fareA['Fare'];
+                        if($row1['Train_cat_id']=="TC1"){
+                           $acfare= $acfare + 100;
+                        }
+                        
                         echo "<form method='POST' action='#'><button class='acbutton1' name=$i > <h3>AC Seat ".$acfare."₹</h3> " . " $aseat_ava   " . " AC Seat Available</button><br>";
                      
                   
@@ -153,6 +160,9 @@
                      $nseat_ava = 20 - $nseat_count;
                      
                         $nacfare = $fareN['Fare'];
+                        if($row1['Train_cat_id']=="TC1"){
+                           $nacfare= $nacfare + 100;
+                        }
                         echo "<button  class='acbutton'  name=$j>  <h3>NON-AC Seat ".$nacfare."₹</h3>" . " $nseat_ava  " . " NON-AC Seat Available</button><br></form>";
                      
                   

@@ -44,11 +44,14 @@ form{
    /* border: 2px solid black;
    border-radius: 10px; */
    margin-left: 20px;
-   padding: 10px;
+  
+   padding-bottom: 10px;
+   padding-top: 10px;
    position: relative;
    left: 30%;
    width: 35%;
-   
+   border: 2px solid rgb(165, 157, 157);
+   border-radius: 20px;
 }
 .upper{
     align-items: center;

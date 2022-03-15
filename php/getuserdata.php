@@ -111,7 +111,7 @@
     <div class=".main1">
         <div class=".getdata">
             <form action="#" method="POST">
-                <div class="upper">
+                <div class="upper" >
                     <div class="part1" id="part1">
                         <input type="text" placeholder="First name" name="fname" required />
                         <input type="text" placeholder="Last name" name="lname" required />

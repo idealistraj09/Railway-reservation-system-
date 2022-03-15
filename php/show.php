@@ -92,7 +92,7 @@
             $i = -1;
             $j = 10;
             if($train_count){
-               echo "<h3'>Total "."$train_count"." Train Avaiable</h3>";
+               echo "<h3 style='width:100%; margin-left:800px;background-color:#ff4b2b; padding:10px; border-radius:10px'>Total "."$train_count"." Train Avaiable</h3>";
             }
             while ($row1) {
                
@@ -181,6 +181,7 @@
 
                echo "</li>";
                if (isset($_POST[$i])) {
+                  
                   for ($r = 0; $r <= $i; $r++) {
                      $row = mysqli_fetch_row($query1);
                      $rowd = mysqli_fetch_row($queryd);
@@ -196,9 +197,20 @@
                   $queryd = mysqli_query($con, $traind_search);
                   $querytc = mysqli_query($con, $trainc_search);
                   
-                  ?>
+                  if (isset($_SESSION['logged_as_user'])) {
+                     ?>
+                     
                      <script>location.href = "getuserdata.php";</script>
                   <?php
+                  } else {
+                    ?>
+                    <script>
+                      alert('You need to Sign in First');
+                    </script>
+                     <script>location.href = "signin.php";</script>
+                <?php
+                  }
+                  
                }
                if (isset($_POST[$j])) {
                   for ($r = 0; $r <= $j-11; $r++) {
@@ -214,13 +226,24 @@
                   $query1 = mysqli_query($con, $train1_search);
                   $queryd = mysqli_query($con, $traind_search);
                   $querytc = mysqli_query($con, $trainc_search);
-                  ?>
+                  if (isset($_SESSION['logged_as_user'])) {
+                     ?>
+                     
                      <script>location.href = "getuserdata.php";</script>
                   <?php
+                  } else {
+                    ?>
+                    <script>
+                      alert('You need to Sign in First');
+                    </script>
+                     <script>location.href = "signin.php";</script>
+                <?php
+                  }
                   
                }
                $row1 = mysqli_fetch_assoc($query);
             }
+            
 ?>
 
          </ul>

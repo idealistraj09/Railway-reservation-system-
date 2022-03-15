@@ -1,3 +1,4 @@
+
 @keyframes bodyt{
     0%{
       opacity: 0.5;
@@ -12,6 +13,7 @@
   }
   body{
       animation:  bodyt 0.75s;
+      font-family: Body,Quicksand,sans-serif;
   }
   input[type=button]{
     cursor: pointer;

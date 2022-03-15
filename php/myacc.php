@@ -64,7 +64,7 @@
                     <span>City :</span>
                     <span>Address :</span>
                     <span>Email : </span>
-                    <span>Moile-no :</span>
+                    <span>Mobile-no :</span>
                     <span>Password :</span>
                 </div>
                 <div class="ans" style="margin-top: 45px;">

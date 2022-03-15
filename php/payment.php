@@ -95,9 +95,9 @@
         </div>
 
     </nav>
-    <div class="wrapper">
+    <div class="wrapper" >
         <center>
-        <div class="train">
+        <div class="train" style="padding: 10px;">
             TRAIN DETAILS
         </div>
         <div class="bill">
@@ -118,11 +118,11 @@
         </div>
     </center>
     <center>
-        <div class="entercard">
+        <div class="entercard" style="padding: 10px;">
             ENTER CARD DETAILS
         </div>
         <div class="container">
-            <article class="part card-details">
+            <article class="part card-details" style="float: right;">
                 <h1>
                     Credit Card Details
                 </h1>
@@ -155,6 +155,8 @@
                     </div>
                 </form>
             </article>
+            
+            </div>
             <div class="part bg"></div>
         </div>
     </center>

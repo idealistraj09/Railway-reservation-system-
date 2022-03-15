@@ -139,7 +139,7 @@ if (isset($_SESSION['logged_as_user'])) {
 <?php
 
 if (isset($_POST['search'])) {
-  if (isset($_SESSION['logged_as_user'])) {
+  
 
     if ($_REQUEST['source'] == $_REQUEST['destination']) {
 ?>
@@ -153,13 +153,7 @@ if (isset($_POST['search'])) {
       $_SESSION['datebook'] = mysqli_real_escape_string($con, @$_REQUEST['date']);
       header('Location: show.php');
     }
-  } else {
-    ?>
-    <script>
-      alert('You need to Sign in First');
-    </script>
-<?php
-  }
+  
 }
 
 

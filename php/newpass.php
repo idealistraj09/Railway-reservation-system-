@@ -14,6 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
         if($_SESSION['usermail'])
         {
             $s = "UPDATE `user` SET `PasswordT`= '$pass' WHERE Email = '$otpmail'";
+            ?>
+                <script>
+                    alert('Password changed');
+                </script>
+            <?php
         }elseif($_SESSION['adminmail'])
         {
             $s = "UPDATE `admin` SET `PasswordT`= '$pass' WHERE Email = '$otpmail'";

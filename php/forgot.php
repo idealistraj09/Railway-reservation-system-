@@ -9,11 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
 
     $email = mysqli_real_escape_string($con, @$_REQUEST['founame']);
 
-    $id_search_user_mail = " SELECT * FROM `user` WHERE BINARY Email='$email' ";
+    $id_search_user_mail = " SELECT * FROM `user` WHERE Email='$email' ";
     $query_user_mail = mysqli_query($con, $id_search_user_mail);
     $id_count_user_mail = mysqli_num_rows($query_user_mail);
 
-    $id_search_admin_mail = " SELECT * FROM `admin` WHERE BINARY Email='$email' ";
+    $id_search_admin_mail = " SELECT * FROM `admin` WHERE Email='$email' ";
     $query_admin_mail = mysqli_query($con, $id_search_admin_mail);
     $id_count_admin_mail = mysqli_num_rows($query_admin_mail);
 

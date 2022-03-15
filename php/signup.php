@@ -191,7 +191,7 @@ if (isset($_POST['click'])) {
                     <!--For Entering Address:-->
                     <textarea resize=none placeholder="Address" name="ladd" required onkeydown="upperCaseF(this)"></textarea>
                     
-                    <span style="color: white;"> <?php echo $msg1; ?> </span>
+                    <span style="color: WHITE;"> <?php echo $msg1; ?> </span>
 
                     <button class="ghost" id="signUp" name="click">Sign Up</button>
 

@@ -3,11 +3,11 @@
 */
 
 /* basic style */
+
 body {
   font-weight: bold;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto ', sans-serif;
   font-size: 14px;
   color: #212121;
   line-height: 1.4;
@@ -17,6 +17,7 @@ body {
   /* backdrop-filter: blur(3px); */
   overflow: hidden;
   animation: bodyt 1s;
+  font-family: Body,Quicksand,sans-serif;
 }
 @keyframes bodyt{
   0%{

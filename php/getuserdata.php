@@ -45,6 +45,7 @@
         $_SESSION['bdate3'] = $date13 = date('y-m-d', strtotime($_POST['date123']));
         $_SESSION['city3'] = $city3 = mysqli_real_escape_string($con, @$_REQUEST['city3']);
 
+       
         $fortrain = "select * from train_category where train_cat_id='$_SESSION[clicketc]';";
         $q = mysqli_query($con,$fortrain);
         $r = mysqli_fetch_array($q);

@@ -25,7 +25,8 @@
     
         $insert_pass = "INSERT INTO `passenger`(`passenger_id`,`First_Name`, `Last_Name`, `Email`, `Gender`, `Mobile_No`, `Date_of_birth`, `City`) VALUES (NULL,'$_SESSION[Fname]','$_SESSION[Lname]','$_SESSION[mailid]','$_SESSION[gender]','$_SESSION[no]','$_SESSION[bdate]','$_SESSION[city]');";
         $insert_seat = "INSERT INTO `seat`(`Seat_id`, `Seat_no`, `Date`, `Seat_availability`, `passsenger_id`, `Seat_cat_id`, `Train_id`,`user_id`) VALUES (NULL,2,'$_SESSION[clicked]','C','$_SESSION[Fname]$_SESSION[Lname]','$_SESSION[clickes]','$_SESSION[clicket]','$_SESSION[uname]')";
-        if ($query4 = mysqli_query($con, $insert_seat)) {
+        $query4 = mysqli_query($con, $insert_seat);
+        if ($query4) {
         } else {
             echo "ERROR: Could not able to execute $insert_seat. " . mysqli_error($con);
         }

@@ -21,7 +21,7 @@ if(isset($_SESSION['sendotpprocess'])!=true)
 	<div class="success"></div>
 	<div class="back">
 		<div class="center">
-			<form id="#mobile-number-verification" action="#" method="post"  style="background-color:#66fa8b">
+			<form id="#mobile-number-verification" action="#" method="post"  style="background-color:#66fa8b; width:100%;">
 				<div class="mobile-row">
 					<label>OTP is sent to your Email ID</label>
 				</div>

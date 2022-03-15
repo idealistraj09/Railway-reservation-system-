@@ -82,7 +82,7 @@
                         if($query4 = mysqli_query($con, $book4)){}else{echo mysqli_error($con);}
                         $train_count = mysqli_num_rows($query4);
                         $row4 = mysqli_fetch_assoc($query4);
-                        echo "<li class='show'>";
+                        echo "<li class='show' style='width:90%;'>";
                         echo "<h3 style='margin-top:1%;'> "." $row2[Train_name] "." </h3>";
                         echo " "." $row3[train_type] "." <br>";
                         echo "<span style='margin-bottom:10px;'> Passsenger Name :"." $row1[passsenger_id] "." </span><br>";

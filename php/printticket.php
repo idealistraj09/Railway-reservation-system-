@@ -45,7 +45,7 @@
         }
         $row3 = mysqli_fetch_array($query4);
     }
-
+    
     ?>
 
     <nav class="navbar">

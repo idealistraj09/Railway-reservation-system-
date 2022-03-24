@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 24, 2022 at 08:26 AM
+-- Generation Time: Mar 24, 2022 at 08:36 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -78,18 +78,18 @@ CREATE TABLE IF NOT EXISTS `fare` (
 --
 
 INSERT INTO `fare` (`Fare_id`, `Fare`, `Tour_id`, `Train_cat_id`, `Seat_cat_id`) VALUES
-('F', '13', 'TR', 'TC1', 'SC1'),
 ('F10', '220', 'TR5', 'TC1', 'SC1'),
 ('F11', '180', 'TR5', 'TC1', 'SC2'),
 ('F12', '399', 'TR6', 'TC1', 'SC1'),
 ('F13', '299', 'TR6', 'TC1', 'SC2'),
-('F15', '88', 'TR', 'TC1', 'SC2'),
 ('F16', '678', 'TR8', 'TC1', 'SC1'),
 ('F17', '6786', 'TR8', 'TC1', 'SC2'),
 ('F18', '200', 'TR9', 'TC1', 'SC1'),
 ('F19', '150', 'TR9', 'TC1', 'SC2'),
 ('F20', '5555', 'TR10', 'TC1', 'SC1'),
 ('F21', '555', 'TR10', 'TC1', 'SC2'),
+('F22', '205', 'TR11', 'TC1', 'SC1'),
+('F23', '302', 'TR11', 'TC1', 'SC2'),
 ('F5', '20', 'TR2', 'TC1', 'SC2'),
 ('F8', '220', 'TR4', 'TC1', 'SC1'),
 ('F9', '180', 'TR4', 'TC1', 'SC2');
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `sequence` (
 --
 
 INSERT INTO `sequence` (`id`, `fare`, `train`) VALUES
-(11, 22, 10);
+(12, 24, 11);
 
 -- --------------------------------------------------------
 
@@ -247,8 +247,8 @@ CREATE TABLE IF NOT EXISTS `tour` (
 --
 
 INSERT INTO `tour` (`Tour_id`, `Source_station_id`, `Destination_station_id`) VALUES
-('TR1', 'RAJKOT', 'ANAND'),
 ('TR10', 'BAKROL', 'VVN'),
+('TR11', 'RAJKOT', 'ANAND'),
 ('TR2', 'VVN', 'ANAND'),
 ('TR4', 'RAJKOT', 'VVN'),
 ('TR5', 'VVN', 'RAJKOT'),
@@ -281,9 +281,8 @@ CREATE TABLE IF NOT EXISTS `train` (
 --
 
 INSERT INTO `train` (`Train_id`, `Train_name`, `Date`, `Arrival_time`, `Departure_time`, `Tour_id`, `Train_cat_id`) VALUES
-('T', 'Noble Nelson', '2022-01-02', '12:16:00', '00:49:00', 'TR1', 'TC1'),
 ('T1', 'ANAND TOUR', '2022-03-25', '11:19:00', '00:20:00', 'TR4', 'TC2'),
-('T2', 'RAJKOT TRAVEL', '2022-03-25', '11:21:00', '01:20:00', 'TR1', 'TC2'),
+('T10', 'Paki Black', '2022-03-25', '14:04:00', '14:07:00', 'TR11', 'TC2'),
 ('T4', 'SOURASTRA MAIL', '2022-03-25', '13:22:00', '14:27:00', 'TR5', 'TC1'),
 ('T5', 'KRISHNA EXPRESS', '2022-03-25', '12:26:00', '12:24:00', 'TR6', 'TC1'),
 ('T7', 'Gage Rogers', '1990-08-17', '01:12:00', '09:44:00', 'TR2', 'TC2'),

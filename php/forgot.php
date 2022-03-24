@@ -78,13 +78,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
         $mail->Username = "proxycyberton09@gmail.com";
 
         //Set gmail password
-        $mail->Password = "RajPopat@2004";
+        $mail->Password = "demoforproject99";
         $mail->addEmbeddedImage('otp.jpg','otp');
         //Email subject
         $mail->Subject = "PASSWORD RESET OTP ";
 
         //Set sender email
-        $mail->setFrom('proxycyberton09@gmail.com');
+        $mail->setFrom('Railway Reservation System');
 
         //Enable HTML
         $mail->isHTML(true);

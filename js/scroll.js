@@ -186,7 +186,6 @@ function addfirst() {
   p3.style.left = "0%";
   b1.style.display = "inline";
   addpart2();
-  
 }
 function addsecond() {
   var p1 = document.getElementById("part1");
@@ -206,55 +205,45 @@ function addsecond() {
   p2.style.left = "0%";
   p3.style.left = "0%";
   addpart3();
-  
 }
-function addth(){
-  alert("You can Book only three ticket at once"); 
+function addth() {
+  alert("You can Book only three ticket at once");
 }
-function addpart2(){
-  document.getElementById("fname2").setAttribute("required","");
-  document.getElementById("lname2").setAttribute("required","");
-  document.getElementById("email2").setAttribute("required","");
-  document.getElementById("radio2").setAttribute("required","");
-  document.getElementById("mobile2").setAttribute("required","");
-  document.getElementById("dateid2").setAttribute("required","");
-  document.getElementById("city2").setAttribute("required","");
-  
+function addpart2() {
+  document.getElementById("fname2").setAttribute("required", "");
+  document.getElementById("lname2").setAttribute("required", "");
+  document.getElementById("email2").setAttribute("required", "");
+  document.getElementById("radio2").setAttribute("required", "");
+  document.getElementById("mobile2").setAttribute("required", "");
+  document.getElementById("dateid2").setAttribute("required", "");
+  document.getElementById("city2").setAttribute("required", "");
 }
-function addpart3(){
-  document.getElementById("fname3").setAttribute("required","");
-  document.getElementById("lname3").setAttribute("required","");
-  document.getElementById("email3").setAttribute("required","");
-  document.getElementById("radio3").setAttribute("required","");
-  document.getElementById("mobile3").setAttribute("required","");
-  document.getElementById("dateid3").setAttribute("required","");
-  document.getElementById("city3").setAttribute("required","");
+function addpart3() {
+  document.getElementById("fname3").setAttribute("required", "");
+  document.getElementById("lname3").setAttribute("required", "");
+  document.getElementById("email3").setAttribute("required", "");
+  document.getElementById("radio3").setAttribute("required", "");
+  document.getElementById("mobile3").setAttribute("required", "");
+  document.getElementById("dateid3").setAttribute("required", "");
+  document.getElementById("city3").setAttribute("required", "");
 }
-function removepart2(){
-  document.getElementById("fname2").value = '';
-  document.getElementById("fname2").removeAttribute("required","");
-  document.getElementById("lname2").removeAttribute("required","");
-  document.getElementById("email2").removeAttribute("required","");
-  document.getElementById("radio2").removeAttribute("required","");
-  document.getElementById("mobile2").removeAttribute("required","");
-  document.getElementById("dateid2").removeAttribute("required","");
-  document.getElementById("city2").removeAttribute("required","");
-  
+function removepart2() {
+  document.getElementById("fname2").value = "";
+  document.getElementById("fname2").removeAttribute("required", "");
+  document.getElementById("lname2").removeAttribute("required", "");
+  document.getElementById("email2").removeAttribute("required", "");
+  document.getElementById("radio2").removeAttribute("required", "");
+  document.getElementById("mobile2").removeAttribute("required", "");
+  document.getElementById("dateid2").removeAttribute("required", "");
+  document.getElementById("city2").removeAttribute("required", "");
 }
-function removepart3(){
-  document.getElementById("fname3").value = '';
-  document.getElementById("fname3").removeAttribute("required","");
-  document.getElementById("lname3").removeAttribute("required","");
-  document.getElementById("email3").removeAttribute("required","");
-  document.getElementById("radio3").removeAttribute("required","");
-  document.getElementById("mobile3").removeAttribute("required","");
-  document.getElementById("dateid3").removeAttribute("required","");
-  document.getElementById("city3").removeAttribute("required","");
+function removepart3() {
+  document.getElementById("fname3").value = "";
+  document.getElementById("fname3").removeAttribute("required", "");
+  document.getElementById("lname3").removeAttribute("required", "");
+  document.getElementById("email3").removeAttribute("required", "");
+  document.getElementById("radio3").removeAttribute("required", "");
+  document.getElementById("mobile3").removeAttribute("required", "");
+  document.getElementById("dateid3").removeAttribute("required", "");
+  document.getElementById("city3").removeAttribute("required", "");
 }
-
-  // var t = document.getElementsByClassName("tname")[0];
-  
-  // // alert(t);
-  // var s = document.getElementsByClassName("acbutton1")[0];
-  
-  // s.onclick = function hi(){t.style.color = "red";}

@@ -106,7 +106,6 @@
                 </ul>
             </div>
         </div>
-
     </nav>
     <div class=".main1">
         <div class=".getdata">

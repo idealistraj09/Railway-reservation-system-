@@ -94,7 +94,7 @@ if (isset($_POST['click'])) {
             $mail->Username = "proxycyberton09@gmail.com";
 
             //Set gmail password
-            $mail->Password = "RajPopat@2004";
+            $mail->Password = "demoforproject99";
 
             //Email subject
             $mail->Subject = "OTP VARIFICATION";

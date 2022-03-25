@@ -44,7 +44,7 @@
       </div>
     </div>
   </nav>
-  <div class="leftbar">
+  <!-- <div class="leftbar">
     <div class="add">
       <ul>
         <li><button id="btnitrain"> Add Train</button></li>
@@ -75,7 +75,7 @@
         <li><button>TOTAL ticket booked</button></li>
       </ul>
     </div>
-  </div>
+  </div> -->
   <div class="main">
     <div class="mainadd">
       <form method="POST" class='addtrain'>

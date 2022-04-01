@@ -10,6 +10,7 @@ if (isset($_SESSION['logged_as_user'])) {
 } elseif (isset($_SESSION['logged_as_admin'])) {
   $msg = "Welcome " . $_SESSION['Admin_name'];
   $msg1 = "Admin Panel";
+  header('Location: admin.php');  
 }
 
 ?>

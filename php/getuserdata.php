@@ -56,7 +56,7 @@
         $r1 = mysqli_fetch_array($q1);
         $_SESSION['scategory'] = $r1['seat_type'];
         
-        $fare_pass = "select Fare from `fare` where Seat_cat_id='$_SESSION[clickes]'and Train_cat_id='$_SESSION[clicketc]' AND Tour_id=(select Tour_id from train where Train_id='$_SESSION[clicket]') ;";
+        $fare_pass = "select Fare from `fare` where Seat_cat_id='$_SESSION[clickes]' AND Tour_id=(select Tour_id from train where Train_id='$_SESSION[clicket]') ;";
         if ($query6 = mysqli_query($con, $fare_pass)) {
         } else {
             echo mysqli_error($con);

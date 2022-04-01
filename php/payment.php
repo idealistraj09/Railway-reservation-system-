@@ -129,10 +129,10 @@
                 <form method="POST" action="#" autocomplete="off" >
                     <div class="group card-number">
                         <label for="first">Card Number</label>
-                        <input type="text" id="first" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
-                        <input type="text" id="second" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
-                        <input type="text" id="third" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
-                        <input type="text" id="fourth" class="cc-num" type="text" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
+                        <input type="number" id="first" class="cc-num" type="number" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
+                        <input type="number" id="second" class="cc-num" type="number" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
+                        <input type="number" id="third" class="cc-num" type="number" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
+                        <input type="number" id="fourth" class="cc-num" type="number" maxlength="4" placeholder="&#9679;&#9679;&#9679;&#9679;" required>
                     </div>
                     <div class="group card-name">
                         <label for="name">Name On Card</label>
@@ -141,12 +141,12 @@
                     <div class="group card-expiry">
                         <div class="input-item expiry">
                             <label for="expiry">Expiry Date</label>
-                            <input type="text" class="month" id="expiry" placeholder="02" required>
-                            <input type="text" class="year" id="" placeholder="2025" required>
+                            <input type="number" class="month" id="expiry" placeholder="02" required>
+                            <input type="number" class="year" id="" placeholder="2025" required>
                         </div>
                         <div class="input-item cvv">
                             <label for="cvv">CVV No.</label><a href="" required>?</a>
-                            <input type="triple" class="cvv" maxlength="3" placeholder="&#9679;&#9679;&#9679;">
+                            <input type="number" class="cvv" maxlength="3" placeholder="&#9679;&#9679;&#9679;">
                         </div>
                     </div>
                     <div class="group submit-group">

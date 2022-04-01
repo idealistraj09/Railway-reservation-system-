@@ -23,6 +23,8 @@
         <h1 class="logo">Railway Reservation System <h3>admin</h3>
         </h1>
         <ul class="nav nav-right">
+        <li><a href="../php/home.php">Home</a></li>
+        <li class='menu__group'><a href='../include/logout.php' class='menu'>Log Out</a></li>
           <li class="menu__group">
             <div class="datetime">
               <div class="date">

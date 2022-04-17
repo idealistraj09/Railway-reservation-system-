@@ -1,0 +1,16 @@
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  table{
+      margin-bottom: 30px;
+  }
+  body{
+      border: 1px solid black;
+      text-align: center;
+    align-items: center;
+    justify-content: center;
+  }

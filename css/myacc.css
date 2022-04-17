@@ -268,20 +268,29 @@ img{
     width: 80%;
   }
 
-.pname{
-  margin-top: 30px;
+.pname span{
+  position: relative;
+ 
   font-size: 30px;
   border: black solid 4px ;
   border-radius: 15px;
   color: #FF4B2B;
-  padding: 5px;
+  
+  padding: 0.5rem;
+  
 }
-
+.pname {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 180px;
+  
+}
 #change :hover{
   color: white;
 }
 .photo img{
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 
 }
 #pers{

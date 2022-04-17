@@ -37,6 +37,7 @@ if (isset($_POST['sendotp'])) {
 </head>
 
 <body>
+    
     <h2>Recover Your Account</h2>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
@@ -54,7 +55,7 @@ if (isset($_POST['sendotp'])) {
         </div>
         <div>
         </div>
-        <div class="overlay-container">
+        <!-- <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <form action="signup.php">
@@ -68,7 +69,7 @@ if (isset($_POST['sendotp'])) {
                     <button class="ghost" id="signUp">Sign Up</button>
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

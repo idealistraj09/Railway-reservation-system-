@@ -35,6 +35,7 @@ if (isset($_SESSION['logged_as_user'])) {
         <ul class="nav nav-right">
           <?php
           if (isset($_SESSION['logged_as_user'])) {
+            
             echo "<li>
             <div class='dropdown'>
                 <button class='dropbtn'>$msg</button>

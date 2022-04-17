@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
         </div>
         <div>
         </div>
-        <div class="overlay-container">
+        <!-- <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <form action="signup.php">
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['pass'] != "") {
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 

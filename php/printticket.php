@@ -113,18 +113,18 @@
                 <div class="minibill">
                     <ul><br>
                         <!-- <li><span text-align="center" >PASSENGER DETAILS:</span></li><br> -->
-                        <li><span class="lispan">Passenger Id: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['Fname'], $space, $_SESSION['Lname']; ?></span></li><br>
-                        <li><span class="lispan">Email: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['mailid']; ?></span></li><br>
-                        <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender']; ?></span></li><br>
-                        <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no']; ?></span></li><br>
-                        <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city']; ?></span></li><br>
-                        <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row['Seat_no']; ?></span></li><br>
+                        <li><span class='lispan'>Passenger Id: </span><span class='line'>-</span><span class='ans'><?php echo $_SESSION['Fname'], $space, $_SESSION['Lname']; ?></span></li><br>
+                        <li><span class='lispan'>Email: </span><span class='line'>-</span><span class='ans'><?php echo $_SESSION['mailid']; ?></span></li><br>
+                        <li><span class='lispan'>Gender:</span><span class='line'>-</span><span class='ans'><?php echo $_SESSION['gender']; ?></span></li><br>
+                        <li><span class='lispan'>Phone No: </span><span class='line'>-</span><span class='ans'><?php echo $_SESSION['no']; ?></span></li><br>
+                        <li><span class='lispan'>City:</span><span class='line'> -</span><span class='ans'><?php echo $_SESSION['city']; ?></span></li><br>
+                        <li><span class='lispan'>Seat no:</span><span class='line'> -</span><span class='ans'><?php $_SESSION['seatno1']= $row['Seat_no'] ;echo $row['Seat_no']; ?></span></li><br>
                     </ul>
                 </div>
             </div>
         </center>
         <?php
-        if ($_SESSION['Fname2'] != "") {
+        if ($_SESSION['Fname2'] != '') {
         ?>
             <center>
                 <div class="bill2">
@@ -136,7 +136,7 @@
                             <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender2']; ?></span></li><br>
                             <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no2']; ?></span></li><br>
                             <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city2']; ?></span></li><br>
-                            <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row2['Seat_no']; ?></span></li><br>
+                            <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php $_SESSION['seatno2']= $row2['Seat_no']; echo $row2['Seat_no']; ?></span></li><br>
                         </ul>
                     </div>
                 </div>
@@ -155,19 +155,29 @@
                             <li><span class="lispan">Gender:</span><span class="line">-</span><span class="ans"><?php echo $_SESSION['gender3']; ?></span></li><br>
                             <li><span class="lispan">Phone No: </span><span class="line">-</span><span class="ans"><?php echo $_SESSION['no3']; ?></span></li><br>
                             <li><span class="lispan">City:</span><span class="line"> -</span><span class="ans"><?php echo $_SESSION['city3']; ?></span></li><br>
-                            <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php echo $row3['Seat_no']; ?></span></li><br>
+                            <li><span class="lispan">Seat no:</span><span class="line"> -</span><span class="ans"><?php $_SESSION['seatno3']= $row3['Seat_no']; echo $row3['Seat_no']; ?></span></li><br>
                         </ul>
                     </div>
                 </div>
+                
             </center>
+            
+            
         <?php
         }
         ?>
     </div>
     <div class="print">
-        <a href="javascript:void(0);" onclick="printPageArea('bill')">Print Ticket</a>
+        <form action="sendticket.php" method='post'>
+       
+        <input type='submit' name="ticket" class="ticket" style="border: none; margin-top:-20px; cursor:pointer;" >
+        </form>
     </div>
-   
+   <?php
+    if(isset($post['ticket'])){
+        header('Location:sendticket.php');
+    }
+   ?>
 
 </body>
 

@@ -12,23 +12,25 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
     $id_search_user_mail = " SELECT * FROM `user` WHERE Email='$email' ";
     $query_user_mail = mysqli_query($con, $id_search_user_mail);
     $id_count_user_mail = mysqli_num_rows($query_user_mail);
-
+    $row1 = mysqli_fetch_assoc($query_user_mail); 
+    
     $id_search_admin_mail = " SELECT * FROM `admin` WHERE Email='$email' ";
     $query_admin_mail = mysqli_query($con, $id_search_admin_mail);
     $id_count_admin_mail = mysqli_num_rows($query_admin_mail);
+    $row12 = mysqli_fetch_assoc($query_admin_mail); 
 
     if ($id_count_user_mail) {
         $_SESSION['usermail'] = true;
         $_SESSION['urlright'] = true;
-        $_SESSION['otpmail'] = $email;
+        $_SESSION['otpmail'] = $row1['Email'];
         $_SESSION['forgatotp'] = true;
-        header('Location: forgototp.php');
+        
     }elseif($id_count_admin_mail){
         $_SESSION['adminmail'] = true;
         $_SESSION['urlright'] = true;
-        $_SESSION['otpmail'] = $email;
+        $_SESSION['otpmail'] = $row12['Email'];
         $_SESSION['forgatotp'] = true;
-        header('Location: forgototp.php');
+        
     } 
     else {
 ?>
@@ -79,12 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
 
         //Set gmail password
         $mail->Password = "demoforproject99";
-        $mail->addEmbeddedImage('otp.jpg','otp');
+        
         //Email subject
         $mail->Subject = "PASSWORD RESET OTP ";
 
         //Set sender email
-        $mail->setFrom('Railway Reservation System');
+        $mail->setFrom('proxycyberton09@gmail.com');
 
         //Enable HTML
         $mail->isHTML(true);
@@ -112,6 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['founame'] != "") {
         $mail->smtpClose();
         
         $con->close();
+        header('Location: forgototp.php');
+
     }
 ?>
 <html>

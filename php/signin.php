@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
     $id_search = "SELECT * FROM `user` WHERE BINARY user_id='$uname' AND BINARY PasswordT = '$password';";
     $query = mysqli_query($con, $id_search);
     $id_count = mysqli_num_rows($query);
+    $row1 = mysqli_fetch_assoc($query);
 
     $id_search_Admin = "SELECT * FROM `admin` WHERE BINARY admin_id='$uname' AND BINARY PasswordT = '$password';";
     $query_Admin = mysqli_query($con, $id_search_Admin);
@@ -39,6 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&  $_POST['uname'] != "" && $_POST['pa
 
         $_SESSION['logged_as_user'] = true;
         $_SESSION['uname'] = $uname;
+        $_SESSION['ticketsendmail'] = $row1['Email'];
+
         header('Location: home.php');
     } elseif ($id_count_Admin > 0) {
         $_SESSION['logged_as_admin'] = true;

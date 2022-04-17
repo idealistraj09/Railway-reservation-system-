@@ -97,7 +97,7 @@ if (isset($_POST['click'])) {
             $mail->Password = "demoforproject99";
 
             //Email subject
-            $mail->Subject = "OTP VARIFICATION";
+            $mail->Subject = "OTP VERIFICATION";
 
             //Set sender email
             $mail->setFrom('proxycyberton09@gmail.com');
@@ -108,7 +108,7 @@ if (isset($_POST['click'])) {
             //Attachment
 
             //Email body
-            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR verify E-mail IS  '.$otp.'</p>'
+            $mail->Body = '<h1>Dear, ' . $uname . ' <br>YOUR OTP FOR verify E-mail is  '.$otp.'</p>'
 								.'<img src="cid:otp">';
 
             //Add recipient

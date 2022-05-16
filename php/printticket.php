@@ -19,6 +19,13 @@
     
     session_start();
     include("../include/connection.php");
+    $_SESSION['train_name']=$train_name = "select Train_name from `train` where Train_id='$_SESSION[clicket]';";
+    if ($query2train = mysqli_query($con, $train_name)) {
+    } else {
+        echo mysqli_error($con);
+    }
+    $_SESSION['train_name']=$rowtrain = mysqli_fetch_array($query2train);
+    $_SESSION['train_name'] = $rowtrain[0];
     $s = strval($_SESSION['Fname']) . strval($_SESSION['Lname']);
     $space = " ";
     $select_pass2 = "select * from `seat` where Date='$_SESSION[clicked]' and passsenger_id='$s' and Seat_cat_id='$_SESSION[clickes]' and Train_id='$_SESSION[clicket]';";

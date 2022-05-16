@@ -4,7 +4,7 @@
 
 /* basic style */
 *{
-  backdrop-filter: blur(3px);
+
 }
 body {
   font-weight: bold;
@@ -16,7 +16,7 @@ body {
   /* background-color: #F9F9F9; */
   background-image: url(../img/train-backround.jpeg);
   background-size: cover;
-  
+  backdrop-filter: blur(3px);
   overflow: hidden;
   animation: bodyt 1s;
   font-family: Body,Quicksand,sans-serif;
@@ -177,7 +177,7 @@ button.ghost {
 	overflow: hidden;
 	width: 480px;
   margin: 0 auto;
-  backdrop-filter: blur(3px);
+  
 	/* max-width: 100%;
 	min-height: 480px; */
 	/* display: inline-flex; */
@@ -194,7 +194,7 @@ form {
 	flex-direction: column;
 	padding: 0 50px;
 	height: 100%;
-  backdrop-filter: blur(3px);
+  
 	text-align: center;
 }
 

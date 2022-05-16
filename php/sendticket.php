@@ -24,23 +24,21 @@ class Pdf extends Dompdf
 function passenger()
 {
     $pass1 = "<h2>Railway Reservation system</h2><br><h1>Train Detail</h1><table><tr>
-    <th>From</th>
-    <th>To</th>
+    <th>PNR no.</th>
+    <th>From-To</th>
     <th>date</th>
     <th>Train type</th>
     <th>Seat Type</th>
-    <th>One Passenger Fare</th>
-    <th>Total Passenger</th>
+    <th>Train Name</th>
     <th>Total Fare</th>
 </tr>
 <tr>
-    <td> $_SESSION[sstation] </td>
-    <td> $_SESSION[dstation] </td>
+    <td>$_SESSION[clicket]13156</td>
+    <td> $_SESSION[sstation] . $_SESSION[dstation] </td>
     <td> $_SESSION[datebook]  </td>
     <td> $_SESSION[tcategory]  </td>
     <td> $_SESSION[scategory]  </td>
-    <td> $_SESSION[fare] </td>
-    <td> $_SESSION[Tpassenger] </td>
+    <td> $_SESSION[train_name] </td>
     <td> $_SESSION[totalfare] </td>
 </tr>
 </table>
@@ -56,7 +54,7 @@ function passenger()
     
 </tr>
 <tr>
-    <td> $_SESSION[Fname]. $_SESSION[Lname] </td>
+    <td> $_SESSION[Fname] $_SESSION[Lname] </td>
     <td> $_SESSION[mailid] </td>
     <td> $_SESSION[gender] </td>
     <td> $_SESSION[no] </td>
@@ -135,6 +133,7 @@ $html_code = '<link rel="stylesheet" href="../css/pdf.css">';
 $html_code .= passenger();
 $pdf = new Pdf();
 $pdf->load_html($html_code);
+
 $pdf->render();
 $file = $pdf->output();
 file_put_contents($file_name, $file);

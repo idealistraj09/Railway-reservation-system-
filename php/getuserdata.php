@@ -74,7 +74,8 @@
             $_SESSION['totalfare']  = (int)$_SESSION['fare'] * (int)$_SESSION['Tpassenger'];
         header('Location: payment.php');
     }
-
+    echo $_SESSION['clicked'];
+    echo $_SESSION['clicket'];
     
     ?>
     

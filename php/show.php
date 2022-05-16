@@ -89,8 +89,8 @@
             $trainc_search = "SELECT `Train_cat_id` FROM `train` WHERE Tour_id=(select Tour_id from `tour` where Source_station_id='$sstation' and Destination_station_id='$dstation');";
             $querytc = mysqli_query($con, $trainc_search);
             
-            $i = -1;
-            $j = 10;
+            $i = 0;
+            $j = 11;
             if($train_count){
                echo "<h3 style='width:100%; margin-left:800px;background-color:#ff4b2b; padding:10px; border-radius:10px'>Total "."$train_count"." Train Avaiable</h3>";
             }
